@@ -1,0 +1,18 @@
+PODS:
+  - HockeySDK (3.8.2):
+    - HockeySDK/AllFeaturesLib (= 3.8.2)
+  - HockeySDK/AllFeaturesLib (3.8.2)
+  - KeychainSwift (3.0.0)
+  - PureLayout (3.0.1)
+
+DEPENDENCIES:
+  - HockeySDK
+  - KeychainSwift (~> 3.0)
+  - PureLayout
+
+SPEC CHECKSUMS:
+  HockeySDK: 9f4ac41263acf9d8a4d59491a7f17af16529b935
+  KeychainSwift: 735f3b9803ce56c47f6f772c8f2013afd515ae07
+  PureLayout: f35f5384c9c4e4479df041dbe33ad7577b71ddfb
+
+COCOAPODS: 0.38.2
