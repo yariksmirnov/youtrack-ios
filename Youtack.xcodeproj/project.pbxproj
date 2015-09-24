@@ -9,10 +9,15 @@
 /* Begin PBXBuildFile section */
 		1BCBDDE55E20CD6AB79C2499 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BB47A751802A9C4ADFF78A2 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		9D0E82ED1BB2F0B800C52B22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0E82EC1BB2F0B800C52B22 /* AppDelegate.swift */; };
-		9D0E82EF1BB2F0B800C52B22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0E82EE1BB2F0B800C52B22 /* ViewController.swift */; };
+		9D0E82EF1BB2F0B800C52B22 /* HostsListViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0E82EE1BB2F0B800C52B22 /* HostsListViewContoller.swift */; };
 		9D0E82F21BB2F0B800C52B22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D0E82F01BB2F0B800C52B22 /* Main.storyboard */; };
 		9D0E82F41BB2F0B800C52B22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D0E82F31BB2F0B800C52B22 /* Assets.xcassets */; };
 		9D0E82F71BB2F0B800C52B22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D0E82F51BB2F0B800C52B22 /* LaunchScreen.storyboard */; };
+		9D81D2D21BB35EE7002B038C /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D81D2D11BB35EE7002B038C /* Session.swift */; settings = {ASSET_TAGS = (); }; };
+		9D8CE01E1BB365C900E725CD /* HostDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8CE01D1BB365C900E725CD /* HostDetailsViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		9D8CE0201BB365E700E725CD /* HostsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8CE01F1BB365E700E725CD /* HostsManager.swift */; settings = {ASSET_TAGS = (); }; };
+		9D8CE0221BB3664800E725CD /* Host.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8CE0211BB3664800E725CD /* Host.swift */; settings = {ASSET_TAGS = (); }; };
+		9D8CE0241BB428B600E725CD /* HostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8CE0231BB428B600E725CD /* HostCell.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,11 +25,17 @@
 		8356B3591E56F8710BBC52A1 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		9D0E82E91BB2F0B800C52B22 /* Youtack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Youtack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D0E82EC1BB2F0B800C52B22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9D0E82EE1BB2F0B800C52B22 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9D0E82EE1BB2F0B800C52B22 /* HostsListViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostsListViewContoller.swift; sourceTree = "<group>"; };
 		9D0E82F11BB2F0B800C52B22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9D0E82F31BB2F0B800C52B22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9D0E82F61BB2F0B800C52B22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9D0E82F81BB2F0B800C52B22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D81D2D01BB2F814002B038C /* Youtack.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Youtack.entitlements; sourceTree = "<group>"; };
+		9D81D2D11BB35EE7002B038C /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		9D8CE01D1BB365C900E725CD /* HostDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostDetailsViewController.swift; sourceTree = "<group>"; };
+		9D8CE01F1BB365E700E725CD /* HostsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostsManager.swift; sourceTree = "<group>"; };
+		9D8CE0211BB3664800E725CD /* Host.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Host.swift; sourceTree = "<group>"; };
+		9D8CE0231BB428B600E725CD /* HostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostCell.swift; sourceTree = "<group>"; };
 		B3A4B64C11FDBAE406922A56 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,12 +81,18 @@
 		9D0E82EB1BB2F0B800C52B22 /* Youtack */ = {
 			isa = PBXGroup;
 			children = (
+				9D81D2D11BB35EE7002B038C /* Session.swift */,
 				9D0E82EC1BB2F0B800C52B22 /* AppDelegate.swift */,
-				9D0E82EE1BB2F0B800C52B22 /* ViewController.swift */,
+				9D8CE0211BB3664800E725CD /* Host.swift */,
+				9D8CE01F1BB365E700E725CD /* HostsManager.swift */,
+				9D0E82EE1BB2F0B800C52B22 /* HostsListViewContoller.swift */,
+				9D8CE0231BB428B600E725CD /* HostCell.swift */,
+				9D8CE01D1BB365C900E725CD /* HostDetailsViewController.swift */,
 				9D0E82F01BB2F0B800C52B22 /* Main.storyboard */,
 				9D0E82F31BB2F0B800C52B22 /* Assets.xcassets */,
 				9D0E82F51BB2F0B800C52B22 /* LaunchScreen.storyboard */,
 				9D0E82F81BB2F0B800C52B22 /* Info.plist */,
+				9D81D2D01BB2F814002B038C /* Youtack.entitlements */,
 			);
 			path = Youtack;
 			sourceTree = "<group>";
@@ -117,12 +134,18 @@
 		9D0E82E11BB2F0B800C52B22 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "SFCD, LLC";
 				TargetAttributes = {
 					9D0E82E81BB2F0B800C52B22 = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = 37M4W65HN3;
+						SystemCapabilities = {
+							com.apple.SafariKeychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -210,8 +233,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D0E82EF1BB2F0B800C52B22 /* ViewController.swift in Sources */,
+				9D0E82EF1BB2F0B800C52B22 /* HostsListViewContoller.swift in Sources */,
+				9D8CE01E1BB365C900E725CD /* HostDetailsViewController.swift in Sources */,
 				9D0E82ED1BB2F0B800C52B22 /* AppDelegate.swift in Sources */,
+				9D8CE0221BB3664800E725CD /* Host.swift in Sources */,
+				9D81D2D21BB35EE7002B038C /* Session.swift in Sources */,
+				9D8CE0201BB365E700E725CD /* HostsManager.swift in Sources */,
+				9D8CE0241BB428B600E725CD /* HostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,11 +353,19 @@
 			baseConfigurationReference = 8356B3591E56F8710BBC52A1 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Youtack/Youtack.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = Youtack/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.softfacade.Youtack;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sfcd.tracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -338,11 +374,18 @@
 			baseConfigurationReference = B3A4B64C11FDBAE406922A56 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Youtack/Youtack.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = Youtack/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.softfacade.Youtack;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sfcd.tracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};

@@ -8,6 +8,7 @@ use_frameworks!
 pod 'HockeySDK'
 pod 'PureLayout' #Autolayout declarative constraints adding wrapper
 pod 'KeychainSwift', '~> 3.0'
-
+pod 'Alamofire'
+pod 'Mantle'
 
 

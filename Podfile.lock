@@ -1,18 +1,26 @@
 PODS:
+  - Alamofire (2.0.2)
   - HockeySDK (3.8.2):
     - HockeySDK/AllFeaturesLib (= 3.8.2)
   - HockeySDK/AllFeaturesLib (3.8.2)
   - KeychainSwift (3.0.0)
+  - Mantle (2.0.5):
+    - Mantle/extobjc (= 2.0.5)
+  - Mantle/extobjc (2.0.5)
   - PureLayout (3.0.1)
 
 DEPENDENCIES:
+  - Alamofire
   - HockeySDK
   - KeychainSwift (~> 3.0)
+  - Mantle
   - PureLayout
 
 SPEC CHECKSUMS:
+  Alamofire: 8edbab00802a752bb5240cc2abe70e7e881488ad
   HockeySDK: 9f4ac41263acf9d8a4d59491a7f17af16529b935
   KeychainSwift: 735f3b9803ce56c47f6f772c8f2013afd515ae07
+  Mantle: 1912395033f601de5adc8ee91e48f46e4c7051ad
   PureLayout: f35f5384c9c4e4479df041dbe33ad7577b71ddfb
 
 COCOAPODS: 0.38.2
