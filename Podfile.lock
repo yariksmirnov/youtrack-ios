@@ -8,6 +8,7 @@ PODS:
     - Mantle/extobjc (= 2.0.5)
   - Mantle/extobjc (2.0.5)
   - PureLayout (3.0.1)
+  - XMLReader-Arc (1.1)
 
 DEPENDENCIES:
   - Alamofire
@@ -15,6 +16,7 @@ DEPENDENCIES:
   - KeychainSwift (~> 3.0)
   - Mantle
   - PureLayout
+  - XMLReader-Arc
 
 SPEC CHECKSUMS:
   Alamofire: 8edbab00802a752bb5240cc2abe70e7e881488ad
@@ -22,5 +24,6 @@ SPEC CHECKSUMS:
   KeychainSwift: 735f3b9803ce56c47f6f772c8f2013afd515ae07
   Mantle: 1912395033f601de5adc8ee91e48f46e4c7051ad
   PureLayout: f35f5384c9c4e4479df041dbe33ad7577b71ddfb
+  XMLReader-Arc: 7832c527346fc26511fd6c05ebcee18008c34d6d
 
 COCOAPODS: 0.38.2

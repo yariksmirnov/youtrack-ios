@@ -39,13 +39,20 @@ class HostsListViewController: UITableViewController, HostDetailsViewContorllerD
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        var indexPath: NSIndexPath?
+        if sender is UITableViewCell {
+            indexPath = tableView.indexPathForCell(sender as! UITableViewCell)
+        }
         if segue.destinationViewController.childViewControllers.first is HostDetailsViewController {
             let newHostVC = segue.destinationViewController.childViewControllers.first as! HostDetailsViewController
             newHostVC.delegate = self
             if segue.identifier == HostDetailsViewController.HostDetailsSegueIdentifier {
-                let indexPath = tableView.indexPathForCell(sender as! UITableViewCell)
                 newHostVC.host = hosts[(indexPath?.row)!]
             }
+        }
+        if segue.destinationViewController is LoginViewController {
+            let loginVC = segue.destinationViewController as! LoginViewController
+            loginVC.host = hosts[(indexPath?.row)!]
         }
     }
     

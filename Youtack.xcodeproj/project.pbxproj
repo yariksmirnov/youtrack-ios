@@ -13,11 +13,18 @@
 		9D0E82F21BB2F0B800C52B22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D0E82F01BB2F0B800C52B22 /* Main.storyboard */; };
 		9D0E82F41BB2F0B800C52B22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D0E82F31BB2F0B800C52B22 /* Assets.xcassets */; };
 		9D0E82F71BB2F0B800C52B22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D0E82F51BB2F0B800C52B22 /* LaunchScreen.storyboard */; };
+		9D4D16AE1BB6004C0038FA41 /* Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4D16AD1BB6004C0038FA41 /* Requests.swift */; settings = {ASSET_TAGS = (); }; };
+		9D4D16B01BB8183E0038FA41 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4D16AF1BB8183E0038FA41 /* LoginViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		9D66EBD61BB8651100E2959C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D66EBD51BB8651100E2959C /* User.swift */; settings = {ASSET_TAGS = (); }; };
+		9D66EBD81BB8655700E2959C /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D66EBD71BB8655700E2959C /* APIClient.swift */; settings = {ASSET_TAGS = (); }; };
+		9D66EBDC1BB8725C00E2959C /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D66EBDB1BB8725C00E2959C /* UserAPI.swift */; settings = {ASSET_TAGS = (); }; };
+		9D66EBDE1BB94CC500E2959C /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D66EBDD1BB94CC500E2959C /* Utils.swift */; settings = {ASSET_TAGS = (); }; };
 		9D81D2D21BB35EE7002B038C /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D81D2D11BB35EE7002B038C /* Session.swift */; settings = {ASSET_TAGS = (); }; };
 		9D8CE01E1BB365C900E725CD /* HostDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8CE01D1BB365C900E725CD /* HostDetailsViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		9D8CE0201BB365E700E725CD /* HostsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8CE01F1BB365E700E725CD /* HostsManager.swift */; settings = {ASSET_TAGS = (); }; };
 		9D8CE0221BB3664800E725CD /* Host.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8CE0211BB3664800E725CD /* Host.swift */; settings = {ASSET_TAGS = (); }; };
 		9D8CE0241BB428B600E725CD /* HostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8CE0231BB428B600E725CD /* HostCell.swift */; settings = {ASSET_TAGS = (); }; };
+		9DB7B7D01BB9626100409CC3 /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB7B7CF1BB9626100409CC3 /* Object.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,12 +37,19 @@
 		9D0E82F31BB2F0B800C52B22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9D0E82F61BB2F0B800C52B22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9D0E82F81BB2F0B800C52B22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D4D16AD1BB6004C0038FA41 /* Requests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Requests.swift; sourceTree = "<group>"; };
+		9D4D16AF1BB8183E0038FA41 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9D66EBD51BB8651100E2959C /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		9D66EBD71BB8655700E2959C /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		9D66EBDB1BB8725C00E2959C /* UserAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAPI.swift; sourceTree = "<group>"; };
+		9D66EBDD1BB94CC500E2959C /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		9D81D2D01BB2F814002B038C /* Youtack.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Youtack.entitlements; sourceTree = "<group>"; };
 		9D81D2D11BB35EE7002B038C /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		9D8CE01D1BB365C900E725CD /* HostDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostDetailsViewController.swift; sourceTree = "<group>"; };
 		9D8CE01F1BB365E700E725CD /* HostsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostsManager.swift; sourceTree = "<group>"; };
 		9D8CE0211BB3664800E725CD /* Host.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Host.swift; sourceTree = "<group>"; };
 		9D8CE0231BB428B600E725CD /* HostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostCell.swift; sourceTree = "<group>"; };
+		9DB7B7CF1BB9626100409CC3 /* Object.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Object.swift; sourceTree = "<group>"; };
 		B3A4B64C11FDBAE406922A56 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,10 +95,17 @@
 		9D0E82EB1BB2F0B800C52B22 /* Youtack */ = {
 			isa = PBXGroup;
 			children = (
+				9D4D16AD1BB6004C0038FA41 /* Requests.swift */,
+				9D66EBDD1BB94CC500E2959C /* Utils.swift */,
 				9D81D2D11BB35EE7002B038C /* Session.swift */,
+				9D66EBD71BB8655700E2959C /* APIClient.swift */,
+				9D66EBDB1BB8725C00E2959C /* UserAPI.swift */,
 				9D0E82EC1BB2F0B800C52B22 /* AppDelegate.swift */,
+				9DB7B7CF1BB9626100409CC3 /* Object.swift */,
+				9D66EBD51BB8651100E2959C /* User.swift */,
 				9D8CE0211BB3664800E725CD /* Host.swift */,
 				9D8CE01F1BB365E700E725CD /* HostsManager.swift */,
+				9D4D16AF1BB8183E0038FA41 /* LoginViewController.swift */,
 				9D0E82EE1BB2F0B800C52B22 /* HostsListViewContoller.swift */,
 				9D8CE0231BB428B600E725CD /* HostCell.swift */,
 				9D8CE01D1BB365C900E725CD /* HostDetailsViewController.swift */,
@@ -235,10 +256,17 @@
 			files = (
 				9D0E82EF1BB2F0B800C52B22 /* HostsListViewContoller.swift in Sources */,
 				9D8CE01E1BB365C900E725CD /* HostDetailsViewController.swift in Sources */,
+				9D4D16B01BB8183E0038FA41 /* LoginViewController.swift in Sources */,
+				9D66EBDE1BB94CC500E2959C /* Utils.swift in Sources */,
+				9D66EBDC1BB8725C00E2959C /* UserAPI.swift in Sources */,
 				9D0E82ED1BB2F0B800C52B22 /* AppDelegate.swift in Sources */,
 				9D8CE0221BB3664800E725CD /* Host.swift in Sources */,
+				9D66EBD81BB8655700E2959C /* APIClient.swift in Sources */,
 				9D81D2D21BB35EE7002B038C /* Session.swift in Sources */,
+				9D4D16AE1BB6004C0038FA41 /* Requests.swift in Sources */,
+				9DB7B7D01BB9626100409CC3 /* Object.swift in Sources */,
 				9D8CE0201BB365E700E725CD /* HostsManager.swift in Sources */,
+				9D66EBD61BB8651100E2959C /* User.swift in Sources */,
 				9D8CE0241BB428B600E725CD /* HostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -359,7 +387,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = Youtack/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sfcd.tracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -380,7 +408,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = Youtack/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sfcd.tracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
