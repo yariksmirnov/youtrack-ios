@@ -8,12 +8,17 @@
 
 import Foundation
 import Mantle
+import Observable
 
 public class User: Object {
-    static var current: User?
+    
+    static var current = Observable<User?>(nil)
+    
+    let CurrentUserDidUpdateNotification = "CurrentUserDidUpdateNotification"
     
     var login: String?
     var fullName: String?
+    var avatar: NSURL?
     var email: String?
     var jabber: String?
     var lastAccess: NSDate?
@@ -30,6 +35,10 @@ public class User: Object {
     }
     
     func roleUrlJSONTransformer() -> NSValueTransformer {
+        return NSValueTransformer(forName: MTLURLValueTransformerName)!
+    }
+    
+    func avatarJSONTransfomer()-> NSValueTransformer {
         return NSValueTransformer(forName: MTLURLValueTransformerName)!
     }
     

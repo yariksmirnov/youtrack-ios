@@ -1,29 +1,56 @@
 PODS:
   - Alamofire (2.0.2)
+  - AlamofireImage (1.1.2):
+    - Alamofire (~> 2.0)
   - HockeySDK (3.8.2):
     - HockeySDK/AllFeaturesLib (= 3.8.2)
   - HockeySDK/AllFeaturesLib (3.8.2)
+  - KeychainAccess (2.0.0)
   - KeychainSwift (3.0.0)
   - Mantle (2.0.5):
     - Mantle/extobjc (= 2.0.5)
   - Mantle/extobjc (2.0.5)
+  - MaterialKit-Swift2 (0.4.1)
+  - Observable-Swift (0.4.2)
   - PureLayout (3.0.1)
+  - UIKit+Material (0.1.2)
   - XMLReader-Arc (1.1)
 
 DEPENDENCIES:
   - Alamofire
+  - AlamofireImage (~> 1.0)
   - HockeySDK
+  - KeychainAccess
   - KeychainSwift (~> 3.0)
   - Mantle
+  - MaterialKit-Swift2 (from `MaterialKit-Swift2.podspec`)
+  - Observable-Swift (from `https://github.com/yariksmirnov/Observable-Swift.git`)
   - PureLayout
+  - UIKit+Material
   - XMLReader-Arc
+
+EXTERNAL SOURCES:
+  MaterialKit-Swift2:
+    :path: MaterialKit-Swift2.podspec
+  Observable-Swift:
+    :git: https://github.com/yariksmirnov/Observable-Swift.git
+
+CHECKOUT OPTIONS:
+  Observable-Swift:
+    :commit: 3b4d48a3ada794d7bdc0cc58cc411b4378c18fec
+    :git: https://github.com/yariksmirnov/Observable-Swift.git
 
 SPEC CHECKSUMS:
   Alamofire: 8edbab00802a752bb5240cc2abe70e7e881488ad
+  AlamofireImage: dc3d3de5d095fd9545b144ba8f6da5bfc539512a
   HockeySDK: 9f4ac41263acf9d8a4d59491a7f17af16529b935
+  KeychainAccess: 1e705665a234b3af69d653aaa3c8f696e4a992f1
   KeychainSwift: 735f3b9803ce56c47f6f772c8f2013afd515ae07
   Mantle: 1912395033f601de5adc8ee91e48f46e4c7051ad
+  MaterialKit-Swift2: a0d00ebf1653d69c38430ec73b557ca13e41894d
+  Observable-Swift: 4f424b8daba478fe3604085b507c7c201110a034
   PureLayout: f35f5384c9c4e4479df041dbe33ad7577b71ddfb
+  UIKit+Material: 4dd6113b27a4a4c97c4f7f7c315ec7338991bea3
   XMLReader-Arc: 7832c527346fc26511fd6c05ebcee18008c34d6d
 
 COCOAPODS: 0.38.2

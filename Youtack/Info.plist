@@ -24,8 +24,20 @@
 	<true/>
 	<key>NSAppTransportSecurity</key>
 	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<string>YES</string>
+		<key>NSExceptionDomains</key>
+    	<dict>
+        	<key>projects.softfacade.com</key>
+        	<dict>
+            	<key>NSIncludesSubdomains</key>
+            	<true/>
+            	<key>NSExceptionAllowsInsecureHTTPLoads</key>
+            	<true/>
+            	<key>NSExceptionMinimumTLSVersion</key>
+            	<string>1.0</string>
+            	<key>NSExceptionRequiresForwardSecrecy</key>
+            	<false/>
+        	</dict>
+    	</dict>	
 	</dict>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>

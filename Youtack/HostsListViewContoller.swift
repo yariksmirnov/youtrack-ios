@@ -15,7 +15,6 @@ class HostsListViewController: UITableViewController, HostDetailsViewContorllerD
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.leftBarButtonItem = editButtonItem()
         
         HostsManager.instance.hostsDidChangedHandler = { hosts in
             self.hostsDidChanged(hosts)
@@ -49,10 +48,6 @@ class HostsListViewController: UITableViewController, HostDetailsViewContorllerD
             if segue.identifier == HostDetailsViewController.HostDetailsSegueIdentifier {
                 newHostVC.host = hosts[(indexPath?.row)!]
             }
-        }
-        if segue.destinationViewController is LoginViewController {
-            let loginVC = segue.destinationViewController as! LoginViewController
-            loginVC.host = hosts[(indexPath?.row)!]
         }
     }
     
@@ -101,6 +96,15 @@ class HostsListViewController: UITableViewController, HostDetailsViewContorllerD
             let deletedHost = hosts.removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Top)
             HostsManager.instance.removeHost(deletedHost)
+        }
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let session = Session(host: hosts[indexPath.row])
+        session.login() { [weak self] success in
+            if success {
+                self?.navigationController?.popToRootViewControllerAnimated(true)
+            }
         }
     }
 }

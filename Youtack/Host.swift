@@ -9,17 +9,15 @@
 import Alamofire
 import Mantle
 
-public class Host: MTLModel, MTLJSONSerializing {
+public class Host: MTLModel, MTLJSONSerializing  {
     var title: String?
     var url: String?
+    var login: String?
+    var password: String?
     var requiredSSL = true
     
     public static func JSONKeyPathsByPropertyKey() -> [NSObject : AnyObject]! {
-        return [
-            "title" : "title",
-            "url" : "url",
-            "requredSSL" : "required_ssl"
-        ]
+        return NSDictionary.mtl_identityPropertyMapWithModel(self)
     }
     
     func requiredSSLJSONTransformer() -> NSValueTransformer {
@@ -27,12 +25,8 @@ public class Host: MTLModel, MTLJSONSerializing {
     }
     
     var valid: Bool {
-        get {
-            return title?.characters.count > 0 && url?.characters.count > 0
-        }
+        get { return !(title?.isEmpty ?? true) && !(url?.isEmpty ?? true) && !(login?.isEmpty ?? true) }
     }
-    
-    //MARK: URLStringConvertible
     
     public func baseURL() -> NSURL {
         let components = NSURLComponents()
@@ -53,8 +47,7 @@ public class Host: MTLModel, MTLJSONSerializing {
         return userURL().URLByAppendingPathComponent("current")
     }
     
-    public func login() -> NSURL {
+    public func loginURL() -> NSURL {
         return userURL().URLByAppendingPathComponent("login")
     }
-    
 }

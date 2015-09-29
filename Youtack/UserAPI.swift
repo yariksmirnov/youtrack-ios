@@ -10,7 +10,7 @@ import Alamofire
 
 public class UserAPI: APIClient {
     
-    public func getCurrentUser(completion:((user: User, error: NSError?) -> Void)?) {
+    public func getCurrentUser(completion:((user: User?, error: NSError?) -> Void)?) {
         currentRequest = request(
             .GET,
             session.host.currentUserURL()
@@ -18,9 +18,9 @@ public class UserAPI: APIClient {
         currentRequest?.responseObject() { (request, response, result: Result<User>)  in
             switch result {
             case .Success(let user):
-                debugPrint(user)
+                completion?(user: user, error: nil)
             case .Failure(_, let error):
-                debugPrint(error)
+                completion?(user: nil, error: error as NSError)
             }
         }
     }

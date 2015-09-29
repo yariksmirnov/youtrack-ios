@@ -7,11 +7,14 @@
 //
 
 import Foundation
+import KeychainAccess
 
 public class HostsManager {
     static public var instance = HostsManager()
     
     var hosts = [Host]();
+    
+    var keychain = Keychain(service: NSBundle.mainBundle().bundleIdentifier!)
     
     var hostsDidChangedHandler: ((hosts: [Host]) -> Void)?
     
@@ -39,21 +42,32 @@ public class HostsManager {
         writeConfiguredHosts()
     }
     
-    public func loadConfiguredHosts(completion: ((hosts: [Host])-> Void)) {
+    public func loadConfiguredHosts(completion: ((hosts: [Host])-> Void)? = nil) {
+        guard hosts.count == 0 else {
+            completion?(hosts: hosts)
+            return
+        }
         dispatch_async(dispatch_get_global_queue(QOS_CLASS_BACKGROUND, 0)) {
-            let hosts = NSKeyedUnarchiver.unarchiveObjectWithFile(self.configuredHostsFilePath()) as? [Host]
-            dispatch_async(dispatch_get_main_queue()) {
-                if hosts != nil {
-                    self.hosts = hosts!
+            if let data = self.keychain[data: "hosts"] {
+                let hosts = NSKeyedUnarchiver.unarchiveObjectWithData(data) as? [Host]
+                dispatch_async(dispatch_get_main_queue()) {
+                    self.hosts = hosts ?? []
+                    for host in self.hosts {
+                        Session.restoreAuthorization(host)
+                    }
+                    completion?(hosts: self.hosts)
                 }
-                completion(hosts: self.hosts)
+            }
+            dispatch_async(dispatch_get_main_queue()) {
+                completion?(hosts: self.hosts)
             }
         }
     }
     
     public func writeConfiguredHosts(completion: ((Void) -> Void)? = nil) {
         dispatch_async(dispatch_get_global_queue(QOS_CLASS_BACKGROUND, 0)) {
-            NSKeyedArchiver.archiveRootObject(self.hosts, toFile: self.configuredHostsFilePath())
+            let data = NSKeyedArchiver.archivedDataWithRootObject(self.hosts)
+            self.keychain[data: "hosts"] = data
             dispatch_async(dispatch_get_main_queue()) {
                 completion?()
             }

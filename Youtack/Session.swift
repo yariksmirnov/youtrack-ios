@@ -7,10 +7,11 @@
 //
 
 import Alamofire
+import Observable
 
 public class Session {
     
-    public static var active: Session?;
+    public static var active: Session?
     
     let host: Host
     
@@ -18,26 +19,35 @@ public class Session {
         self.host = host
     }
     
-    public func login(username: String, password: String, completion: ((success: Bool) -> Void)?) {
+    public static func restoreAuthorization(host: Host) -> Bool {
+        let session = Session(host: host)
+        if session.authorized {
+            active = session
+            active?.loadCurrentUserInfo()
+            print("Restored authorization for host: \(host)")
+            return true
+        }
+        return false
+    }
+    
+    public func login(completion: ((success: Bool) -> Void)? = nil) {
         request(
             .POST,
-            host.login(),
-            parameters: ["login" : username, "password" : password])
+            host.loginURL(),
+            parameters: ["login" : host.login!, "password" : host.password!])
             .validate()
             .responseString { request, response, result in
                 print(response)
                 switch result {
                 case .Success(_):
                     if let headers = response?.allHeaderFields as? [String : String] {
-                        let cookies = NSHTTPCookie.cookiesWithResponseHeaderFields(
-                            headers,
-                            forURL: self.host.baseURL()
-                        )
-                        if let authCookie = cookies.first {
-                            NSHTTPCookieStorage.sharedHTTPCookieStorage().setCookie(authCookie)
-                            Session.active = self
+                        do {
+                            try self.authorize(headers)
+                            self.loadCurrentUserInfo()
                             completion?(success: true)
                             return
+                        } catch {
+                            //no-opt
                         }
                     }
                     completion?(success: false)
@@ -60,6 +70,25 @@ public class Session {
                 }
             }
             return false
+        }
+    }
+    
+    func authorize(headers: [String: String]) throws {
+        let cookies = NSHTTPCookie.cookiesWithResponseHeaderFields(
+            headers,
+            forURL: host.baseURL()
+        )
+        if let authCookie = cookies.first {
+            NSHTTPCookieStorage.sharedHTTPCookieStorage().setCookie(authCookie)
+            Session.active = self
+            return
+        }
+    }
+    
+    func loadCurrentUserInfo() {
+        let api = UserAPI()!
+        api.getCurrentUser { (user, error) -> Void in
+            User.current = Observable(user)
         }
     }
     
