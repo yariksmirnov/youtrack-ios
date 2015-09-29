@@ -25,10 +25,10 @@
 		9D46B1211BBB37EC006EE5BF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D46B10A1BBB37EC006EE5BF /* User.swift */; settings = {ASSET_TAGS = (); }; };
 		9D46B1221BBB37EC006EE5BF /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D46B10C1BBB37EC006EE5BF /* Notifications.swift */; settings = {ASSET_TAGS = (); }; };
 		9D46B1231BBB37EC006EE5BF /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D46B10D1BBB37EC006EE5BF /* Utils.swift */; settings = {ASSET_TAGS = (); }; };
-		9D46B1241BBB37EC006EE5BF /* HostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D46B10F1BBB37EC006EE5BF /* HostCell.swift */; settings = {ASSET_TAGS = (); }; };
-		9D46B1251BBB37EC006EE5BF /* HostDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D46B1101BBB37EC006EE5BF /* HostDetailsViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		9D46B1261BBB37EC006EE5BF /* HostsListViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D46B1111BBB37EC006EE5BF /* HostsListViewContoller.swift */; settings = {ASSET_TAGS = (); }; };
-		9D46B1271BBB37EC006EE5BF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D46B1121BBB37EC006EE5BF /* MainViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		9D46B13C1BBB386C006EE5BF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D46B1361BBB386C006EE5BF /* MainViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		9D46B13D1BBB386C006EE5BF /* HostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D46B1391BBB386C006EE5BF /* HostCell.swift */; settings = {ASSET_TAGS = (); }; };
+		9D46B13E1BBB386C006EE5BF /* HostDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D46B13A1BBB386C006EE5BF /* HostDetailsViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		9D46B13F1BBB386C006EE5BF /* HostsListViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D46B13B1BBB386C006EE5BF /* HostsListViewContoller.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,10 +53,10 @@
 		9D46B10A1BBB37EC006EE5BF /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9D46B10C1BBB37EC006EE5BF /* Notifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		9D46B10D1BBB37EC006EE5BF /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
-		9D46B10F1BBB37EC006EE5BF /* HostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostCell.swift; sourceTree = "<group>"; };
-		9D46B1101BBB37EC006EE5BF /* HostDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostDetailsViewController.swift; sourceTree = "<group>"; };
-		9D46B1111BBB37EC006EE5BF /* HostsListViewContoller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostsListViewContoller.swift; sourceTree = "<group>"; };
-		9D46B1121BBB37EC006EE5BF /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		9D46B1361BBB386C006EE5BF /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		9D46B1391BBB386C006EE5BF /* HostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostCell.swift; sourceTree = "<group>"; };
+		9D46B13A1BBB386C006EE5BF /* HostDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostDetailsViewController.swift; sourceTree = "<group>"; };
+		9D46B13B1BBB386C006EE5BF /* HostsListViewContoller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostsListViewContoller.swift; sourceTree = "<group>"; };
 		9D81D2D01BB2F814002B038C /* Youtack.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Youtack.entitlements; sourceTree = "<group>"; };
 		B3A4B64C11FDBAE406922A56 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -133,7 +133,7 @@
 				9D46B1071BBB37EC006EE5BF /* Model */,
 				9D46B10B1BBB37EC006EE5BF /* Utils */,
 				9D46B1131BBB37EC006EE5BF /* Views */,
-				9D46B10E1BBB37EC006EE5BF /* ViewControllers */,
+				9D46B1341BBB386C006EE5BF /* ViewControllers */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -176,22 +176,46 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		9D46B10E1BBB37EC006EE5BF /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				9D46B10F1BBB37EC006EE5BF /* HostCell.swift */,
-				9D46B1101BBB37EC006EE5BF /* HostDetailsViewController.swift */,
-				9D46B1111BBB37EC006EE5BF /* HostsListViewContoller.swift */,
-				9D46B1121BBB37EC006EE5BF /* MainViewController.swift */,
-			);
-			path = ViewControllers;
-			sourceTree = "<group>";
-		};
 		9D46B1131BBB37EC006EE5BF /* Views */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		9D46B1341BBB386C006EE5BF /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9D46B1351BBB386C006EE5BF /* Main */,
+				9D46B1371BBB386C006EE5BF /* Settings */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		9D46B1351BBB386C006EE5BF /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				9D46B1361BBB386C006EE5BF /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		9D46B1371BBB386C006EE5BF /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				9D46B1381BBB386C006EE5BF /* Hosts */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		9D46B1381BBB386C006EE5BF /* Hosts */ = {
+			isa = PBXGroup;
+			children = (
+				9D46B1391BBB386C006EE5BF /* HostCell.swift */,
+				9D46B13A1BBB386C006EE5BF /* HostDetailsViewController.swift */,
+				9D46B13B1BBB386C006EE5BF /* HostsListViewContoller.swift */,
+			);
+			path = Hosts;
 			sourceTree = "<group>";
 		};
 		AFDC93728E0FCE36C8563602 /* Frameworks */ = {
@@ -333,21 +357,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D46B13D1BBB386C006EE5BF /* HostCell.swift in Sources */,
 				9D46B1221BBB37EC006EE5BF /* Notifications.swift in Sources */,
 				9D46B11C1BBB37EC006EE5BF /* AppDelegate.swift in Sources */,
+				9D46B13E1BBB386C006EE5BF /* HostDetailsViewController.swift in Sources */,
 				9D46B1191BBB37EC006EE5BF /* APIClient.swift in Sources */,
+				9D46B13F1BBB386C006EE5BF /* HostsListViewContoller.swift in Sources */,
+				9D46B13C1BBB386C006EE5BF /* MainViewController.swift in Sources */,
 				9D46B11F1BBB37EC006EE5BF /* Host.swift in Sources */,
-				9D46B1251BBB37EC006EE5BF /* HostDetailsViewController.swift in Sources */,
 				9D46B11E1BBB37EC006EE5BF /* Session.swift in Sources */,
 				9D46B11A1BBB37EC006EE5BF /* Requests.swift in Sources */,
 				9D46B1211BBB37EC006EE5BF /* User.swift in Sources */,
 				9D46B1231BBB37EC006EE5BF /* Utils.swift in Sources */,
-				9D46B1271BBB37EC006EE5BF /* MainViewController.swift in Sources */,
-				9D46B1261BBB37EC006EE5BF /* HostsListViewContoller.swift in Sources */,
 				9D46B11B1BBB37EC006EE5BF /* UserAPI.swift in Sources */,
 				9D46B1201BBB37EC006EE5BF /* Object.swift in Sources */,
 				9D46B11D1BBB37EC006EE5BF /* HostsManager.swift in Sources */,
-				9D46B1241BBB37EC006EE5BF /* HostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
