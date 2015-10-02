@@ -11,17 +11,15 @@ import Alamofire
 public class UserAPI: APIClient {
     
     public func getCurrentUser(completion:((user: User?, error: NSError?) -> Void)?) {
-        currentRequest = request(
-            .GET,
-            session.host.currentUserURL()
-        )
-        currentRequest?.responseObject() { (request, response, result: Result<User>)  in
-            switch result {
-            case .Success(let user):
-                completion?(user: user, error: nil)
-            case .Failure(_, let error):
-                completion?(user: nil, error: error as NSError)
-            }
+        currentRequest = request(Router.CurrentUser())
+            .validate()
+            .responseObject() { (request, response, result: Result<User>)  in
+                switch result {
+                case .Success(let user):
+                    completion?(user: user, error: nil)
+                case .Failure(_, let error):
+                    completion?(user: nil, error: error as NSError)
+                }
         }
     }
     

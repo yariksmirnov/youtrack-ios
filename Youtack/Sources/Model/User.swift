@@ -26,6 +26,15 @@ public class User: Object {
     var roleUrl: NSURL?
     
     
+    public func avatarURL(size: Int) -> NSURL? {
+        guard let url = avatar else {
+            return nil
+        }
+        let components = NSURLComponents(URL: url, resolvingAgainstBaseURL: false)
+        components?.queryItems = [NSURLQueryItem(name: "s", value: String(size))]
+        return components?.URL
+    }
+    
     override public class func JSONKeyPathsByPropertyKey() -> [NSObject : AnyObject]! {
         return NSDictionary.mtl_identityPropertyMapWithModel(self)
     }

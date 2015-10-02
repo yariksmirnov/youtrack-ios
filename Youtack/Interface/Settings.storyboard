@@ -16,7 +16,7 @@
         <!--Navigation Controller-->
         <scene sceneID="ThV-67-ifw">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ps4-qH-WeH" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ps4-qH-WeH" customClass="NavigationController" customModule="Youtack" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="S5v-g2-Omg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -34,7 +34,7 @@
         <!--Settings-->
         <scene sceneID="qaA-2n-OmG">
             <objects>
-                <tableViewController id="BWt-mM-zhZ" sceneMemberID="viewController">
+                <tableViewController id="BWt-mM-zhZ" customClass="SettingsViewController" customModule="Youtack" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Bro-Nw-HiI">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -53,13 +53,13 @@
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="59f-oe-do4">
                                     <rect key="frame" x="120" y="40" width="77" height="20"/>
                                     <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="17"/>
-                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EnW-GZ-yv9">
                                     <rect key="frame" x="120" y="58.5" width="80" height="18"/>
                                     <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="15"/>
-                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
@@ -88,7 +88,7 @@
                                                     <rect key="frame" x="15" y="0.0" width="550" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -108,6 +108,11 @@
                     <tabBarItem key="tabBarItem" title="Settings" image="ic_settings_36pt" id="yxz-bv-2hS"/>
                     <navigationItem key="navigationItem" title="Settings" id="v0D-3s-dbe"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="nameLabel" destination="59f-oe-do4" id="TqT-VW-W2o"/>
+                        <outlet property="photoImageView" destination="Klv-im-7nN" id="ZjV-Rw-Tpt"/>
+                        <outlet property="usernameLabel" destination="EnW-GZ-yv9" id="5BR-bp-VZ1"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BCg-OQ-LJM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

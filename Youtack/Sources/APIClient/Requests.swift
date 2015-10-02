@@ -83,11 +83,11 @@ extension Request {
         )
     }
     
-    public func responseArray<T: CollectionType where T.Generator.Element: MTLJSONSerializing>(
-        completionHandler: (NSURLRequest?, NSHTTPURLResponse?, Result<T>) -> Void
+    public func responseArray<T: MTLJSONSerializing>(
+        completionHandler: (NSURLRequest?, NSHTTPURLResponse?, Result<[T]>) -> Void
         ) -> Self
     {
-        let responseSerializer = GenericResponseSerializer<T> { request, response, data in
+        let responseSerializer = GenericResponseSerializer<[T]> { request, response, data in
             let XMLResponseSerializer = Request.XMLResponseSerializer()
             let result = XMLResponseSerializer.serializeResponse(request, response, data)
             
@@ -98,8 +98,8 @@ extension Request {
                     return .Failure(data, error)
                 }
                 do {
-                    let object = try MTLJSONAdapter.modelsOfClass(T.Generator.Element.self, fromJSONArray: array)
-                    return .Success(object as! T)
+                    let object = try MTLJSONAdapter.modelsOfClass(T.self, fromJSONArray: array)
+                    return .Success(object as! [T])
                 } catch (let error) {
                     return .Failure(data, error)
                 }
