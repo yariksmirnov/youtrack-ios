@@ -11,13 +11,7 @@ import Alamofire
 public class APIClient {
     
     let session: Session!
-    var currentRequest: Request? {
-        didSet {
-            if let request = currentRequest {
-                print(request)
-            }
-        }
-    }
+    var currentRequest: Request?
     
     var entity: Object? {
         didSet {

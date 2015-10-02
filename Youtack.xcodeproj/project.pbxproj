@@ -52,6 +52,8 @@
 		9D46B1411BBB3914006EE5BF /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D46B1401BBB3914006EE5BF /* SettingsViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		9D5454611BBD8A29007CEF76 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5454601BBD8A29007CEF76 /* Router.swift */; settings = {ASSET_TAGS = (); }; };
 		9D7B262D1BBC42D400CCAA88 /* Paginator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B262C1BBC42D400CCAA88 /* Paginator.swift */; settings = {ASSET_TAGS = (); }; };
+		9D99F9B31BBED03800F73616 /* HexColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D99F9B21BBED03800F73616 /* HexColors.swift */; settings = {ASSET_TAGS = (); }; };
+		9D99F9B61BBF2E2C00F73616 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D99F9B51BBF2E2C00F73616 /* DataSource.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -104,6 +106,8 @@
 		9D5454601BBD8A29007CEF76 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		9D7B262C1BBC42D400CCAA88 /* Paginator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Paginator.swift; sourceTree = "<group>"; };
 		9D81D2D01BB2F814002B038C /* Youtack.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Youtack.entitlements; sourceTree = "<group>"; };
+		9D99F9B21BBED03800F73616 /* HexColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HexColors.swift; sourceTree = "<group>"; };
+		9D99F9B51BBF2E2C00F73616 /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		B3A4B64C11FDBAE406922A56 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -225,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				9D46B1041BBB37EC006EE5BF /* BuisnessLogic */,
+				9D99F9B41BBF2E1E00F73616 /* DataSource */,
 				9D46B0FF1BBB37EC006EE5BF /* APIClient */,
 				9D46B1071BBB37EC006EE5BF /* Model */,
 				9D46B10B1BBB37EC006EE5BF /* Utils */,
@@ -270,6 +275,7 @@
 			children = (
 				9D46B10C1BBB37EC006EE5BF /* Notifications.swift */,
 				9D46B10D1BBB37EC006EE5BF /* Utils.swift */,
+				9D99F9B21BBED03800F73616 /* HexColors.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -317,6 +323,14 @@
 				9D46B13B1BBB386C006EE5BF /* HostsListViewContoller.swift */,
 			);
 			path = Hosts;
+			sourceTree = "<group>";
+		};
+		9D99F9B41BBF2E1E00F73616 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				9D99F9B51BBF2E2C00F73616 /* DataSource.swift */,
+			);
+			path = DataSource;
 			sourceTree = "<group>";
 		};
 		AFDC93728E0FCE36C8563602 /* Frameworks */ = {
@@ -480,6 +494,7 @@
 				9D46B1221BBB37EC006EE5BF /* Notifications.swift in Sources */,
 				9D7B262D1BBC42D400CCAA88 /* Paginator.swift in Sources */,
 				9D46B11C1BBB37EC006EE5BF /* AppDelegate.swift in Sources */,
+				9D99F9B31BBED03800F73616 /* HexColors.swift in Sources */,
 				9D46B13E1BBB386C006EE5BF /* HostDetailsViewController.swift in Sources */,
 				9D46B1191BBB37EC006EE5BF /* APIClient.swift in Sources */,
 				9D46B13F1BBB386C006EE5BF /* HostsListViewContoller.swift in Sources */,
@@ -495,6 +510,7 @@
 				9D46B11B1BBB37EC006EE5BF /* UserAPI.swift in Sources */,
 				9D4142001BBC349F003D5F81 /* IssuesViewController.swift in Sources */,
 				9D46B1201BBB37EC006EE5BF /* Object.swift in Sources */,
+				9D99F9B61BBF2E2C00F73616 /* DataSource.swift in Sources */,
 				9D46B11D1BBB37EC006EE5BF /* HostsManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -606,6 +622,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Youtack/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -627,6 +644,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Youtack/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

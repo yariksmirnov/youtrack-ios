@@ -2,25 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3156078-18f1-44b0-95d5-285195c0ed27" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Youtack/Assets.xcassets/ic_search_18pt.imageset/Contents.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Youtack/Sources/APIClient/Paginator.swift" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Youtack/Sources/APIClient/Router.swift" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Youtack/Sources/ViewControllers/Generic/NavigationController.swift" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Youtack/Sources/ViewControllers/Issues/IssuesViewController.swift" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Youtack/Sources/ViewControllers/Settings/SettingsViewController.swift" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/MaterialKit-Swift2.podspec" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apple-app-site-association.json" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Podfile" afterPath="$PROJECT_DIR$/Podfile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Youtack/Sources/Utils/HexColors.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/youtrack-ios.iml" afterPath="$PROJECT_DIR$/.idea/youtrack-ios.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Podfile.lock" afterPath="$PROJECT_DIR$/Podfile.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Youtack.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/Youtack.xcodeproj/project.pbxproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Youtack/Info.plist" afterPath="$PROJECT_DIR$/Youtack/Info.plist" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Youtack/Interface/Issues.storyboard" afterPath="$PROJECT_DIR$/Youtack/Interface/Issues.storyboard" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Youtack/Interface/Settings.storyboard" afterPath="$PROJECT_DIR$/Youtack/Interface/Settings.storyboard" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Youtack/Sources/APIClient/APIClient.swift" afterPath="$PROJECT_DIR$/Youtack/Sources/APIClient/APIClient.swift" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Youtack/Sources/APIClient/Requests.swift" afterPath="$PROJECT_DIR$/Youtack/Sources/APIClient/Requests.swift" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Youtack/Sources/APIClient/UserAPI.swift" afterPath="$PROJECT_DIR$/Youtack/Sources/APIClient/UserAPI.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Youtack/Sources/AppDelegate.swift" afterPath="$PROJECT_DIR$/Youtack/Sources/AppDelegate.swift" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Youtack/Sources/BuisnessLogic/Session.swift" afterPath="$PROJECT_DIR$/Youtack/Sources/BuisnessLogic/Session.swift" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Youtack/Sources/Model/User.swift" afterPath="$PROJECT_DIR$/Youtack/Sources/Model/User.swift" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Youtack/Sources/ViewControllers/Main/MainViewController.swift" afterPath="$PROJECT_DIR$/Youtack/Sources/ViewControllers/Main/MainViewController.swift" />
     </list>
     <ignored path="youtrack-ios.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -44,8 +34,8 @@
       <file leaf-file-name="Paginator.swift" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Youtack/Sources/APIClient/Paginator.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6689038">
-              <caret line="54" column="5" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.46308726">
+              <caret line="55" column="5" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -295,7 +285,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="XcodeSettings" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RunManager" selected="Application.Youtack">
@@ -465,10 +455,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="28" y="30" width="1211" height="689" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24938068" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24938068" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3298351" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -522,8 +512,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Youtack/Sources/APIClient/Paginator.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6689038">
-          <caret line="54" column="5" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.46308726">
+          <caret line="55" column="5" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
           <folding />
         </state>
       </provider>

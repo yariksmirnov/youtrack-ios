@@ -24,7 +24,6 @@ public class Session {
         if session.authorized {
             active = session
             active?.loadCurrentUserInfo()
-            print("Restored authorization for host: \(host)")
             return true
         }
         return false
@@ -32,7 +31,6 @@ public class Session {
     
     public func login(completion: ((success: Bool) -> Void)? = nil) {
         request(Router.Login(host: host)).validate().responseString { request, response, result in
-            print(response)
             switch result {
             case .Success(_):
                 if let headers = response?.allHeaderFields as? [String : String] {

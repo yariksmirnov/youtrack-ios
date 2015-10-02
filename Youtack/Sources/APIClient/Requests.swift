@@ -22,11 +22,11 @@ extension Request {
                 return .Failure(data, error)
             }
             if let httpResponse = response {
-                print(httpResponse)
+                Log.debug(httpResponse.debugDescription)
             }
             do {
                 let XML = try XMLReader.dictionaryForXMLData(validData, options: options)
-                print(XML)
+                Log.verbose((XML as NSDictionary).debugDescription)
                 if XML.count == 1 {
                     if let nestedEntry = XML.values.first {
                         return .Success(nestedEntry)
@@ -44,6 +44,7 @@ extension Request {
         completionHandler: (NSURLRequest?, NSHTTPURLResponse?, Result<AnyObject>) -> Void)
         -> Self
     {
+        Log.debug(request.debugDescription)
         return response(
             responseSerializer: Request.XMLResponseSerializer(options: options),
             completionHandler: completionHandler
