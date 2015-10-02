@@ -22,7 +22,7 @@ extension Request {
                 return .Failure(data, error)
             }
             if let httpResponse = response {
-                Log.debug(httpResponse.debugDescription)
+                Log.debug("\(httpResponse.URL!) \(httpResponse.statusCode)\nHeaders: \(httpResponse.allHeaderFields as NSDictionary)")
             }
             do {
                 let XML = try XMLReader.dictionaryForXMLData(validData, options: options)
@@ -44,7 +44,7 @@ extension Request {
         completionHandler: (NSURLRequest?, NSHTTPURLResponse?, Result<AnyObject>) -> Void)
         -> Self
     {
-        Log.debug(request.debugDescription)
+        Log.debug((self as! CustomStringConvertible).description)
         return response(
             responseSerializer: Request.XMLResponseSerializer(options: options),
             completionHandler: completionHandler
@@ -58,6 +58,7 @@ extension Request {
         completionHandler: (NSURLRequest?, NSHTTPURLResponse?, Result<T>) -> Void
         ) -> Self
     {
+        Log.debug((self as! CustomStringConvertible).description)
         let responseSerializer = GenericResponseSerializer<T> { request, response, data in
             let XMLResponseSerializer = Request.XMLResponseSerializer()
             let result = XMLResponseSerializer.serializeResponse(request, response, data)
@@ -88,6 +89,7 @@ extension Request {
         completionHandler: (NSURLRequest?, NSHTTPURLResponse?, Result<[T]>) -> Void
         ) -> Self
     {
+        Log.debug((self as! CustomStringConvertible).description)
         let responseSerializer = GenericResponseSerializer<[T]> { request, response, data in
             let XMLResponseSerializer = Request.XMLResponseSerializer()
             let result = XMLResponseSerializer.serializeResponse(request, response, data)
