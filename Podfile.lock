@@ -18,6 +18,7 @@ PODS:
   - MaterialKit-Swift2 (0.4.1)
   - Observable-Swift (0.4.2)
   - PureLayout (3.0.1)
+  - SwiftyStateMachine (0.2.0)
   - UIColor+BFPaperColors (1.7.1)
   - XCGLogger (3.0)
   - XMLReader-Arc (1.1)
@@ -36,6 +37,8 @@ DEPENDENCIES:
   - MaterialKit-Swift2 (from `https://github.com/reesemclean/MaterialKit.git`)
   - Observable-Swift (from `https://github.com/yariksmirnov/Observable-Swift.git`)
   - PureLayout
+  - SwiftyStateMachine (from `https://github.com/macoscope/SwiftyStateMachine.git`,
+    branch `11-swift-2`)
   - XCGLogger
   - XMLReader-Arc
 
@@ -47,6 +50,9 @@ EXTERNAL SOURCES:
     :git: https://github.com/reesemclean/MaterialKit.git
   Observable-Swift:
     :git: https://github.com/yariksmirnov/Observable-Swift.git
+  SwiftyStateMachine:
+    :branch: 11-swift-2
+    :git: https://github.com/macoscope/SwiftyStateMachine.git
 
 CHECKOUT OPTIONS:
   ExSwift:
@@ -58,6 +64,9 @@ CHECKOUT OPTIONS:
   Observable-Swift:
     :commit: 3b4d48a3ada794d7bdc0cc58cc411b4378c18fec
     :git: https://github.com/yariksmirnov/Observable-Swift.git
+  SwiftyStateMachine:
+    :commit: 8989005492bc3b00bb27c2aab091184681e5b6fb
+    :git: https://github.com/macoscope/SwiftyStateMachine.git
 
 SPEC CHECKSUMS:
   Alamofire: 8edbab00802a752bb5240cc2abe70e7e881488ad
@@ -73,6 +82,7 @@ SPEC CHECKSUMS:
   MaterialKit-Swift2: a0d00ebf1653d69c38430ec73b557ca13e41894d
   Observable-Swift: 4f424b8daba478fe3604085b507c7c201110a034
   PureLayout: f35f5384c9c4e4479df041dbe33ad7577b71ddfb
+  SwiftyStateMachine: a1d80e0aafdb0d2a339b330470586881af33f307
   UIColor+BFPaperColors: b1efa4320e2f56c4b14f73232faf967ba0e5b4a2
   XCGLogger: 5802533aff8bafc8b3b9776ab8972576f31d0a4e
   XMLReader-Arc: 7832c527346fc26511fd6c05ebcee18008c34d6d

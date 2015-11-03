@@ -13,7 +13,7 @@ import Alamofire
 enum Router: URLRequestConvertible {
     
     case Login(host: Host)
-    case CurrentUser()
+    case CurrentUser
     
     func restAPI() -> NSURL {
         return Session.active!.host.restAPI()
@@ -25,7 +25,7 @@ enum Router: URLRequestConvertible {
             case .Login(let host):
                 return (
                     .POST,
-                    host.restAPI().URLByAppendingPathComponent("login"),
+                    host.restAPI().URLByAppendingPathComponent("user/login"),
                     [ "login" : host.login!, "password" : host.password!]
                 )
             case CurrentUser:

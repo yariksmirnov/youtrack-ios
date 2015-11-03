@@ -11,6 +11,9 @@ import Observable
 
 public class Session {
     
+    static let SessionDidAuthorizeNotification = "SessionDidAuthorizeNotification"
+    static let SessionDidCloseNotification = "SessionDidCloseNotification"
+    
     public static var active: Session?
     
     let host: Host
@@ -23,6 +26,7 @@ public class Session {
         let session = Session(host: host)
         if session.authorized {
             active = session
+            NSNotificationCenter.post(Session.SessionDidAuthorizeNotification, object: session)
             active?.loadCurrentUserInfo()
             return true
         }
@@ -46,7 +50,7 @@ public class Session {
                 completion?(success: false)
             case .Failure(let failureData, let error):
                 if let data = failureData {
-                    print("Login Failed: \(NSString(data: data, encoding: NSUTF8StringEncoding)!) \(error)")
+                    Log.error("Login Failed: \(NSString(data: data, encoding: NSUTF8StringEncoding)!) \(error)")
                 }
                 completion?(success: false)
             }

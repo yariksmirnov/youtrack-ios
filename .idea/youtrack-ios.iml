@@ -143,6 +143,8 @@
       <sourceFolder url="file://$MODULE_DIR$/Pods/PureLayout/PureLayout/PureLayout/PureLayout+Internal.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/PureLayout/PureLayout/PureLayout/PureLayout.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/PureLayout/PureLayout/PureLayout/PureLayoutDefines.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/SwiftyStateMachine/StateMachine/GraphableStateMachineSchema.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/SwiftyStateMachine/StateMachine/StateMachine.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Alamofire/Alamofire-dummy.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Alamofire/Alamofire-prefix.pch" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Alamofire/Alamofire-umbrella.h" isTestSource="false" />
@@ -225,6 +227,12 @@
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/PureLayout/PureLayout-umbrella.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/PureLayout/PureLayout.modulemap" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/PureLayout/PureLayout.xcconfig" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/SwiftyStateMachine/Info.plist" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/SwiftyStateMachine/SwiftyStateMachine-dummy.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/SwiftyStateMachine/SwiftyStateMachine-prefix.pch" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/SwiftyStateMachine/SwiftyStateMachine-umbrella.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/SwiftyStateMachine/SwiftyStateMachine.modulemap" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/SwiftyStateMachine/SwiftyStateMachine.xcconfig" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/UIColor+BFPaperColors/Info.plist" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/UIColor+BFPaperColors/UIColor+BFPaperColors-dummy.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/UIColor+BFPaperColors/UIColor+BFPaperColors-prefix.pch" isTestSource="false" />
@@ -281,19 +289,31 @@
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/AppDelegate.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/BuisnessLogic/HostsManager.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/BuisnessLogic/Session.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/DataSource/BasicAdapter.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/DataSource/DataSource.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/DataSource/PaginationDataSource.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/DataSource/PlaceholderView.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/Model/Host.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/Model/Issue.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/Model/Object.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/Model/SavedSearch.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/Model/User.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/Utils/HexColors.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/Utils/Notifications.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/Utils/Utils.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/ViewControllers/Generic/ListViewController.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/ViewControllers/Generic/NavigationController.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/ViewControllers/Generic/ViewController.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/ViewControllers/Issues/IssuesDataSource.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/ViewControllers/Issues/IssuesViewController.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/ViewControllers/Issues/SavedSearchesDataSource.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/ViewControllers/Main/MainViewController.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/ViewControllers/Settings/Hosts/HostCell.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/ViewControllers/Settings/Hosts/HostDetailsViewController.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/ViewControllers/Settings/Hosts/HostsListViewContoller.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/ViewControllers/Settings/SettingsViewController.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/Views/IssueCell.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/Views/SavedSearchCell.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Youtack.entitlements" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />

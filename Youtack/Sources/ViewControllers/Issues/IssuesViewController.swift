@@ -9,17 +9,29 @@
 import UIKit
 import MaterialDesignColor
 
-class IssuesViewController: UIViewController {
+public class IssuesViewController: ListViewController {
     
+    var searchesDataSource: SavedSearchesDataSource? {
+        get { return dataSource as? SavedSearchesDataSource }
+    }
     @IBOutlet var searchTextField: UITextField?
 
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.barTintColor = MaterialDesignColor.blue500
+    }
+    
+    override func layoutTableView() {
+        super.layoutTableView()
+        tableView.autoPinEdgesToSuperviewEdges()
+        tableView.contentInset = UIEdgeInsets(top: 64, left: 0, bottom: 0, right: 0)
     }
     
     @IBAction func onCancelSearch() {
         searchTextField?.resignFirstResponder()
     }
-
+    
+    override func buildDataSource() -> DataSource? {
+        return SavedSearchesDataSource()
+    }
 }

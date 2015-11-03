@@ -10,6 +10,20 @@ import Alamofire
 import Mantle
 import XMLReader_Arc
 
+extension Dictionary {
+    func removeRoot() -> AnyObject {
+        if count == 1 {
+             let nestedEntry = values.first as! AnyObject
+            if let nestedDict = nestedEntry as? Dictionary {
+                return nestedDict.removeRoot()
+            } else {
+                return nestedEntry
+            }
+        }
+        return self as! AnyObject
+    }
+}
+
 extension Request {
     
     public static func XMLResponseSerializer(
@@ -27,12 +41,8 @@ extension Request {
             do {
                 let XML = try XMLReader.dictionaryForXMLData(validData, options: options)
                 Log.verbose((XML as NSDictionary).debugDescription)
-                if XML.count == 1 {
-                    if let nestedEntry = XML.values.first {
-                        return .Success(nestedEntry)
-                    }
-                }
-                return .Success(XML)
+                let result = XML.removeRoot()
+                return .Success(result)
             } catch {
                 return .Failure(data, error as NSError)
             }

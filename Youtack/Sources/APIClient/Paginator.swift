@@ -37,7 +37,7 @@ public class Paginator<T: MTLJSONSerializing> {
     }
     
     public func load(page: Int = 1, completion: PaginatorResponseHandler? = nil) {
-        let url = session.host.baseURL().URLByAppendingPathComponent(resource)
+        let url = session.host.restAPI().URLByAppendingPathComponent(resource)
         let parameters = [
             "limit" : limit,
             "offset" : offsetFromPage(page)
