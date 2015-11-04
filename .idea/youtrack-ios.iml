@@ -302,6 +302,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/Utils/Notifications.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/Utils/Utils.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/ViewControllers/Generic/ListViewController.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/ViewControllers/Generic/MaterialCardsDataSource.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/ViewControllers/Generic/NavigationController.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/ViewControllers/Generic/ViewController.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/ViewControllers/Issues/IssuesDataSource.swift" isTestSource="false" />
@@ -313,6 +314,8 @@
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/ViewControllers/Settings/Hosts/HostsListViewContoller.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/ViewControllers/Settings/SettingsViewController.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/Views/IssueCell.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/Views/MaterialCard.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/Views/MaterialTableCell.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/Views/SavedSearchCell.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Youtack.entitlements" isTestSource="false" />
     </content>

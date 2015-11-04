@@ -7,6 +7,6 @@
 //
 
 
-class Issue: Object {
+public class Issue: Object {
 
 }

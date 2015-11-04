@@ -8,9 +8,9 @@
 
 import UIKit
 
-class IssueCell: UITableViewCell {
+public class IssueCell: UITableViewCell, ConfigurableCell {
 
-    func configure(issues: Issue) {
+    public func configure(issues: Issue) {
         
     }
 

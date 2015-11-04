@@ -8,10 +8,9 @@
 
 import UIKit
 
-class SavedSearchCell: UITableViewCell {
+public class SavedSearchCell: MaterialTableCell, ConfigurableCell {
     
-    func configure(savedSearch: SavedSearch) {
-        textLabel?.text = savedSearch.name
+    public func configure(item: SavedSearch) {
+        textLabel?.text = item.name
     }
-    
 }

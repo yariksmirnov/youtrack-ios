@@ -81,9 +81,15 @@ protocol DataSource: UITableViewDataSource, ContentLoading {
     func reset()
 }
 
-public class BasicDataSource<T: DataSourceItem>: NSObject, ContentLoading, DataSource {
+public protocol ConfigurableCell {
+    typealias Item
+    func configure(item: Item)
+}
+
+public class BasicDataSource<T: DataSourceItem, C: UITableViewCell where C: ConfigurableCell, C.Item == T>: NSObject, ContentLoading, DataSource {
     
     typealias Item = T
+    typealias TableCell = C
     
     var items: [Item] = []
     
@@ -94,6 +100,7 @@ public class BasicDataSource<T: DataSourceItem>: NSObject, ContentLoading, DataS
     typealias Updater = (BasicDataSource) -> NSError?
     var ContentLoader: ((completion: (Updater) -> Void) -> Void)?
     var request: Request?
+    var CellIdentifier = ""
     
     let stateMachine: StateMachine<StateMachineSchema<LoadState, Operation, Void>> = StateMachine(
         schema: schema,
@@ -241,22 +248,28 @@ public class BasicDataSource<T: DataSourceItem>: NSObject, ContentLoading, DataS
         return cell
     }
     
-    func registerReusableViews(tableView: UITableView) {}
-    func cell(indexPath: NSIndexPath, inTableView tableView: UITableView) -> UITableViewCell {
-        return UITableViewCell()
+    func registerReusableViews(tableView: UITableView) {
+        tableView.registerClass(TableCell.self, forCellReuseIdentifier: CellIdentifier)
     }
-    func configureCell(cell: UITableViewCell, atIndexPath indexPath: NSIndexPath, withEntity entity: Item) {}
+    
+    func cell(indexPath: NSIndexPath, inTableView tableView: UITableView) -> TableCell {
+        return tableView.dequeueReusableCellWithIdentifier(CellIdentifier, forIndexPath: indexPath) as! TableCell
+    }
+    
+    func configureCell(cell: TableCell, atIndexPath indexPath: NSIndexPath, withEntity entity: Item) {
+        cell.configure(entity)
+    }
 }
 
 protocol DataSourceTableViewUpdater: class {
-    func dataSourceDidReloadData<T>(dataSource: BasicDataSource<T>)
-    func dataSource<T>(
-        dataSource: BasicDataSource<T>,
+    func dataSourceDidReloadData<T, C>(dataSource: BasicDataSource<T, C>)
+    func dataSource<T, C>(
+        dataSource: BasicDataSource<T, C>,
         updateItemAtIndexPath indexPath: NSIndexPath,
         updateAction: (cell: UITableViewCell) -> Void
     )
 }
 
 protocol DataSourceContentLoadingDelegate: class {
-    func dataSourceDidLoad<T>(dataSource: BasicDataSource<T>, error: NSError?)
+    func dataSourceDidLoad<T, C>(dataSource: BasicDataSource<T, C>, error: NSError?)
 }

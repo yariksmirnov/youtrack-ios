@@ -10,6 +10,7 @@
 		1BCBDDE55E20CD6AB79C2499 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BB47A751802A9C4ADFF78A2 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		94EC8E9DFD1F1F80F91C6F1F /* PaginationDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EC8235F9E8A262C2402B9F /* PaginationDataSource.swift */; };
 		9D0E82F41BB2F0B800C52B22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D0E82F31BB2F0B800C52B22 /* Assets.xcassets */; };
+		9D1BF5651BEA9ED100CF6AC3 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1BF5641BEA9ED100CF6AC3 /* R.generated.swift */; };
 		9D31A3681BC91FDA0056ED67 /* IssuesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D31A3671BC91FDA0056ED67 /* IssuesDataSource.swift */; };
 		9D31A36A1BC9200D0056ED67 /* Issue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D31A3691BC9200D0056ED67 /* Issue.swift */; };
 		9D31A36C1BC9205D0056ED67 /* IssueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D31A36B1BC9205D0056ED67 /* IssueCell.swift */; };
@@ -62,6 +63,10 @@
 		9D5454611BBD8A29007CEF76 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5454601BBD8A29007CEF76 /* Router.swift */; };
 		9D577A101BE8E193000DB042 /* IssuesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4141FF1BBC349F003D5F81 /* IssuesViewController.swift */; };
 		9D7B262D1BBC42D400CCAA88 /* Paginator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B262C1BBC42D400CCAA88 /* Paginator.swift */; };
+		9D7B6A641BE920440097C893 /* MaterialCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B6A631BE920440097C893 /* MaterialCard.swift */; };
+		9D7B6A661BE952330097C893 /* MaterialCardsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B6A651BE952330097C893 /* MaterialCardsDataSource.swift */; };
+		9D7B6A681BE953050097C893 /* MaterialTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B6A671BE953050097C893 /* MaterialTableCell.swift */; };
+		9D7B6A6A1BE95A330097C893 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B6A691BE95A330097C893 /* Extensions.swift */; };
 		9D85474A1BC2C7290005628C /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8547491BC2C7290005628C /* PlaceholderView.swift */; };
 		9D99F9B31BBED03800F73616 /* HexColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D99F9B21BBED03800F73616 /* HexColors.swift */; };
 		9D99F9B61BBF2E2C00F73616 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D99F9B51BBF2E2C00F73616 /* DataSource.swift */; };
@@ -74,6 +79,7 @@
 		9D0E82E91BB2F0B800C52B22 /* Youtack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Youtack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D0E82F31BB2F0B800C52B22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9D0E82F81BB2F0B800C52B22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D1BF5641BEA9ED100CF6AC3 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		9D31A3671BC91FDA0056ED67 /* IssuesDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssuesDataSource.swift; sourceTree = "<group>"; };
 		9D31A3691BC9200D0056ED67 /* Issue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Issue.swift; sourceTree = "<group>"; };
 		9D31A36B1BC9205D0056ED67 /* IssueCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssueCell.swift; sourceTree = "<group>"; };
@@ -126,6 +132,10 @@
 		9D53F3881BE8C7870081E317 /* SavedSearchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedSearchCell.swift; sourceTree = "<group>"; };
 		9D5454601BBD8A29007CEF76 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		9D7B262C1BBC42D400CCAA88 /* Paginator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Paginator.swift; sourceTree = "<group>"; };
+		9D7B6A631BE920440097C893 /* MaterialCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialCard.swift; sourceTree = "<group>"; };
+		9D7B6A651BE952330097C893 /* MaterialCardsDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MaterialCardsDataSource.swift; path = ../ViewControllers/Generic/MaterialCardsDataSource.swift; sourceTree = "<group>"; };
+		9D7B6A671BE953050097C893 /* MaterialTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialTableCell.swift; sourceTree = "<group>"; };
+		9D7B6A691BE95A330097C893 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		9D81D2D01BB2F814002B038C /* Youtack.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Youtack.entitlements; sourceTree = "<group>"; };
 		9D8547491BC2C7290005628C /* PlaceholderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
 		9D99F9B21BBED03800F73616 /* HexColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HexColors.swift; sourceTree = "<group>"; };
@@ -189,6 +199,7 @@
 		9D4141D81BBC3413003D5F81 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9D1BF5641BEA9ED100CF6AC3 /* R.generated.swift */,
 				9D4141D91BBC3413003D5F81 /* Fonts */,
 			);
 			path = Resources;
@@ -304,6 +315,7 @@
 				9D46B10C1BBB37EC006EE5BF /* Notifications.swift */,
 				9D46B10D1BBB37EC006EE5BF /* Utils.swift */,
 				9D99F9B21BBED03800F73616 /* HexColors.swift */,
+				9D7B6A691BE95A330097C893 /* Extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -313,6 +325,8 @@
 			children = (
 				9D31A36B1BC9205D0056ED67 /* IssueCell.swift */,
 				9D53F3881BE8C7870081E317 /* SavedSearchCell.swift */,
+				9D7B6A631BE920440097C893 /* MaterialCard.swift */,
+				9D7B6A671BE953050097C893 /* MaterialTableCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -361,6 +375,7 @@
 				9D99F9B51BBF2E2C00F73616 /* DataSource.swift */,
 				9D8547491BC2C7290005628C /* PlaceholderView.swift */,
 				94EC8235F9E8A262C2402B9F /* PaginationDataSource.swift */,
+				9D7B6A651BE952330097C893 /* MaterialCardsDataSource.swift */,
 				9D53F3821BE3B4B20081E317 /* BasicAdapter.swift */,
 			);
 			path = DataSource;
@@ -382,6 +397,7 @@
 			buildConfigurationList = 9D0E82FB1BB2F0B800C52B22 /* Build configuration list for PBXNativeTarget "Youtack" */;
 			buildPhases = (
 				96D4849182B72861E44BFAB5 /* Check Pods Manifest.lock */,
+				9D1BF5631BEA9C7B00CF6AC3 /* R Script */,
 				9D0E82E51BB2F0B800C52B22 /* Sources */,
 				9D0E82E61BB2F0B800C52B22 /* Frameworks */,
 				9D0E82E71BB2F0B800C52B22 /* Resources */,
@@ -516,6 +532,20 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		9D1BF5631BEA9C7B00CF6AC3 /* R Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "R Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" \"$SRCROOT/Youtack/Resources/\"";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -523,6 +553,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D7B6A661BE952330097C893 /* MaterialCardsDataSource.swift in Sources */,
+				9D7B6A641BE920440097C893 /* MaterialCard.swift in Sources */,
 				9D53F3811BE2D3AD0081E317 /* ListViewController.swift in Sources */,
 				9D53F3851BE55EF20081E317 /* SavedSearchesDataSource.swift in Sources */,
 				9D31A36A1BC9200D0056ED67 /* Issue.swift in Sources */,
@@ -535,6 +567,7 @@
 				9D577A101BE8E193000DB042 /* IssuesViewController.swift in Sources */,
 				9D99F9B31BBED03800F73616 /* HexColors.swift in Sources */,
 				9D46B13E1BBB386C006EE5BF /* HostDetailsViewController.swift in Sources */,
+				9D7B6A6A1BE95A330097C893 /* Extensions.swift in Sources */,
 				9D46B1191BBB37EC006EE5BF /* APIClient.swift in Sources */,
 				9D46B13F1BBB386C006EE5BF /* HostsListViewContoller.swift in Sources */,
 				9D46B13C1BBB386C006EE5BF /* MainViewController.swift in Sources */,
@@ -545,7 +578,9 @@
 				9D5454611BBD8A29007CEF76 /* Router.swift in Sources */,
 				9D46B1211BBB37EC006EE5BF /* User.swift in Sources */,
 				9D46B1231BBB37EC006EE5BF /* Utils.swift in Sources */,
+				9D1BF5651BEA9ED100CF6AC3 /* R.generated.swift in Sources */,
 				9D53F37F1BE2D38F0081E317 /* ViewController.swift in Sources */,
+				9D7B6A681BE953050097C893 /* MaterialTableCell.swift in Sources */,
 				9D53F3871BE55F790081E317 /* SavedSearch.swift in Sources */,
 				9D53F3831BE3B4B20081E317 /* BasicAdapter.swift in Sources */,
 				9D4142031BBC359A003D5F81 /* NavigationController.swift in Sources */,

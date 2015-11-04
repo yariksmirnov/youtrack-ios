@@ -16,11 +16,11 @@ class BasicAdapter : DataSourceTableViewUpdater {
         self.tableView = tableView
     }
     
-    func dataSourceDidReloadData<T>(dataSource: BasicDataSource<T>) {
+    func dataSourceDidReloadData<T, C>(dataSource: BasicDataSource<T, C>) {
         self.tableView.reloadData()
     }
     
-    func dataSource<T>(dataSource: BasicDataSource<T>,
+    func dataSource<T, C>(dataSource: BasicDataSource<T,C>,
         updateItemAtIndexPath indexPath: NSIndexPath, 
         updateAction: (cell: UITableViewCell) -> Void)
     {

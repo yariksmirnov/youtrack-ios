@@ -10,7 +10,7 @@ public protocol PaginationItem: DataSourceItem, MTLJSONSerializing {}
 
 extension Object: PaginationItem {}
 
-public class PaginationDataSource<T: PaginationItem> : BasicDataSource<T> {
+public class PaginationDataSource<T: PaginationItem, C: UITableViewCell where C: ConfigurableCell, C.Item == T > : BasicDataSource<T, C> {
 
     var paginator: Paginator<T>
 

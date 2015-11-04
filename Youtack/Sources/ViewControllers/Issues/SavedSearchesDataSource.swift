@@ -9,24 +9,12 @@
 import UIKit
 
 
-public class SavedSearchesDataSource : PaginationDataSource<SavedSearch> {
-    
-    let SavedSearchCellIdentifier = "SavedSearchCell"
+public class SavedSearchesDataSource : MaterialCardsDataSource<SavedSearch, SavedSearchCell> {
     
     init() {
         let paginator = Paginator<SavedSearch>(resource: "user/search")
         super.init(paginator: paginator!)
+        CellIdentifier = "SavedSearchCell"
     }
     
-    override func registerReusableViews(tableView: UITableView) {
-        tableView.registerClass(SavedSearchCell.self, forCellReuseIdentifier: SavedSearchCellIdentifier)
-    }
-    
-    override func cell(indexPath: NSIndexPath, inTableView tableView: UITableView) -> UITableViewCell {
-        return tableView.dequeueReusableCellWithIdentifier(SavedSearchCellIdentifier, forIndexPath: indexPath)
-    }
-    
-    override func configureCell(cell: UITableViewCell, atIndexPath indexPath: NSIndexPath, withEntity entity: Item) {
-        (cell as? SavedSearchCell)?.configure(entity)
-    }
 }

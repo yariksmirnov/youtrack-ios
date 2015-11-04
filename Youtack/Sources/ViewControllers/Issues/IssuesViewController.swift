@@ -25,6 +25,8 @@ public class IssuesViewController: ListViewController {
         super.layoutTableView()
         tableView.autoPinEdgesToSuperviewEdges()
         tableView.contentInset = UIEdgeInsets(top: 64, left: 0, bottom: 0, right: 0)
+        tableView.backgroundColor = UIColor(gray: 232)
+        tableView.separatorStyle = .None
     }
     
     @IBAction func onCancelSearch() {
@@ -33,5 +35,13 @@ public class IssuesViewController: ListViewController {
     
     override func buildDataSource() -> DataSource? {
         return SavedSearchesDataSource()
+    }
+    
+    //MARK: TableViewDelegate
+    
+    public func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if let search = searchesDataSource?.item(indexPath) {
+            searchTextField?.text = search.text
+        }
     }
 }
