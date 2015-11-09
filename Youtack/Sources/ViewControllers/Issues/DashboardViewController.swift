@@ -17,15 +17,13 @@ public class DashboardViewController: ListViewController {
 
     override public func viewDidLoad() {
         super.viewDidLoad()
-        addCustomNavigationBar()
-        navItem?.title = "Dashboard".uppercaseString
-        self.navigationBar!.barTintColor = MaterialDesignColor.blue500
+        title = "Dashboard"
     }
     
     override func layoutTableView() {
         super.layoutTableView()
         tableView.autoPinEdgesToSuperviewEdges()
-        tableView.estimatedRowHeight = 48
+        tableView.estimatedRowHeight = 44
     }
     
     override func buildDataSource() -> DataSource? {

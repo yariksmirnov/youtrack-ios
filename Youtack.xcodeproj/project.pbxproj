@@ -70,6 +70,7 @@
 		9D85474A1BC2C7290005628C /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8547491BC2C7290005628C /* PlaceholderView.swift */; };
 		9D8ACF0F1BEE8FAE00868807 /* IssueField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8ACF0E1BEE8FAE00868807 /* IssueField.swift */; };
 		9D8ACF111BF0BA8100868807 /* Attachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8ACF101BF0BA8100868807 /* Attachment.swift */; };
+		9D8F25411BF0E37400E8687D /* IssueFieldColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8F25401BF0E37400E8687D /* IssueFieldColor.swift */; };
 		9D99F9B31BBED03800F73616 /* HexColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D99F9B21BBED03800F73616 /* HexColors.swift */; };
 		9D99F9B61BBF2E2C00F73616 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D99F9B51BBF2E2C00F73616 /* DataSource.swift */; };
 		9DB1AE201BEBB26900C0876B /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB1AE1F1BEBB26900C0876B /* ListCell.swift */; };
@@ -145,6 +146,7 @@
 		9D8547491BC2C7290005628C /* PlaceholderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
 		9D8ACF0E1BEE8FAE00868807 /* IssueField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssueField.swift; sourceTree = "<group>"; };
 		9D8ACF101BF0BA8100868807 /* Attachment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Attachment.swift; sourceTree = "<group>"; };
+		9D8F25401BF0E37400E8687D /* IssueFieldColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssueFieldColor.swift; sourceTree = "<group>"; };
 		9D99F9B21BBED03800F73616 /* HexColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HexColors.swift; sourceTree = "<group>"; };
 		9D99F9B51BBF2E2C00F73616 /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		9DB1AE1F1BEBB26900C0876B /* ListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
@@ -319,6 +321,7 @@
 				9D8ACF0E1BEE8FAE00868807 /* IssueField.swift */,
 				9D53F3861BE55F790081E317 /* SavedSearch.swift */,
 				9D8ACF101BF0BA8100868807 /* Attachment.swift */,
+				9D8F25401BF0E37400E8687D /* IssueFieldColor.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -598,6 +601,7 @@
 				9D5454611BBD8A29007CEF76 /* Router.swift in Sources */,
 				9D46B1211BBB37EC006EE5BF /* User.swift in Sources */,
 				9D46B1231BBB37EC006EE5BF /* Utils.swift in Sources */,
+				9D8F25411BF0E37400E8687D /* IssueFieldColor.swift in Sources */,
 				9D1BF5651BEA9ED100CF6AC3 /* R.generated.swift in Sources */,
 				9D53F37F1BE2D38F0081E317 /* ViewController.swift in Sources */,
 				9D7B6A681BE953050097C893 /* MaterialTableCell.swift in Sources */,

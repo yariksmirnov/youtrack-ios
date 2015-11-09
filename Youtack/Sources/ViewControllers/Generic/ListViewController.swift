@@ -52,7 +52,7 @@ public class ListViewController: ViewController, UITableViewDelegate {
         view.insertSubview(tableView, atIndex: 0)
         tableView.delegate = self
         tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.backgroundColor = UIColor(gray: 232)
+        tableView.backgroundColor = UIColor(gray: 236)
         tableView.separatorStyle = .None
     }
     

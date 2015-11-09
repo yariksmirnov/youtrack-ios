@@ -10,7 +10,7 @@ import UIKit
 import MaterialDesignColor
 import BFPaperTabBarController
 
-class MainViewController: BFPaperTabBarController {
+class MainViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,8 +24,8 @@ class MainViewController: BFPaperTabBarController {
     func initializeAppearence() {
         let titleAttribs: [String:AnyObject] = [
             NSForegroundColorAttributeName : UIColor.whiteColor(),
-            NSFontAttributeName : UIFont(name: "Roboto-Medium", size: 20)!
         ]
         UINavigationBar.appearance().titleTextAttributes = titleAttribs
+        UINavigationBar.appearance().barTintColor = UIColor(hexRGB: 0x2852ad)
     }
 }

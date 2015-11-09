@@ -18,7 +18,6 @@ class SettingsViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.barTintColor = MaterialDesignColor.red500
         User.current.afterChange.add(){ user in
             self.updateCurrentUserInfo()
         }

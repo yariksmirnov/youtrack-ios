@@ -7,7 +7,6 @@
         <!--Dashboard View Controller-->
         <scene sceneID="VRH-MH-d7t">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="30T-cc-0nA" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="MWZ-LQ-h6Y" customClass="DashboardViewController" customModule="Youtack" customModuleProvider="Youtrack" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WFQ-tM-4lJ"/>
@@ -22,14 +21,15 @@
                     <navigationItem key="navigationItem" id="JrZ-QO-CRR"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="30T-cc-0nA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1063" y="-468"/>
         </scene>
-        <!--Issues-->
+        <!--Home-->
         <scene sceneID="zyG-Es-ZX0">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="SlB-3g-xyP" customClass="NavigationController" customModule="Youtack" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Issues" image="ic_view_list" id="uMw-t0-bL4"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SlB-3g-xyP" customClass="NavigationController" customModule="Youtack" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="home" id="uMw-t0-bL4"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="PQm-GF-KhS">
@@ -48,6 +48,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ic_view_list" width="24" height="24"/>
+        <image name="home" width="25" height="25"/>
     </resources>
 </document>

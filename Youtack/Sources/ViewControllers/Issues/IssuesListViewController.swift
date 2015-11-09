@@ -28,8 +28,7 @@ class IssuesListViewController: ListViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         addCustomNavigationBar()
-        navItem?.title = savedSearch?.query?.uppercaseString
-        self.navigationBar!.barTintColor = MaterialDesignColor.blue500
+        title = savedSearch?.query?.uppercaseString
     }
     
     override func layoutTableView() {

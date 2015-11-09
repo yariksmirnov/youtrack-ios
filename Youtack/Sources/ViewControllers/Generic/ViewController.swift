@@ -29,36 +29,14 @@ public class ViewController: UIViewController {
         navigationBar?.autoresizingMask = [.FlexibleWidth, .FlexibleBottomMargin]
         navItem = UINavigationItem()
         navigationBar?.items = [navItem!]
-        navigationBar?.tintColor = UIColor.whiteColor()
-        navigationBar?.titleTextAttributes = [
-            NSFontAttributeName : R.font.robotoBold(size: 17)!,
-            NSForegroundColorAttributeName : UIColor.whiteColor()
-        ]
-        UINavigationBar.appearance().backIndicatorImage = R.image.navBarBack
     }
     
     func updateNavigationBarVisibility(animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
     }
 
     func updateBarButtonItems(animated: Bool) {
-        let isInNavigation = self.navigationController != nil
-        let isFirstInNavigation = self.navigationController?.viewControllers.first == self
-        if isInNavigation && !isFirstInNavigation {
-            navigationItem.leftBarButtonItems = [customBackButtonItem]
-        }
-        if navItem != nil {
-            navItem?.leftBarButtonItems = navigationItem.leftBarButtonItems
-            navigationItem.leftBarButtonItems = nil
-        }
     }
-    
-    lazy var customBackButtonItem: UIBarButtonItem = UIBarButtonItem(
-        image: R.image.ic_arrow_back_36pt,
-        style: .Plain,
-        target: self,
-        action: "onBack"
-    )
     
     func onBack() {
         self.navigationController?.popViewControllerAnimated(true)

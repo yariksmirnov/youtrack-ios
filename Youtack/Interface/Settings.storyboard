@@ -60,7 +60,7 @@
                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="@username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EnW-GZ-yv9">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EnW-GZ-yv9">
                                     <rect key="frame" x="120" y="58.5" width="80" height="18"/>
                                     <animations/>
                                     <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="15"/>
@@ -114,7 +114,7 @@
                             <outlet property="delegate" destination="BWt-mM-zhZ" id="FfJ-3z-3NM"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Settings" image="ic_settings_36pt" id="yxz-bv-2hS"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="settings" id="yxz-bv-2hS"/>
                     <navigationItem key="navigationItem" title="Settings" id="v0D-3s-dbe"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -137,6 +137,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ic_settings_36pt" width="36" height="36"/>
+        <image name="settings" width="32" height="32"/>
     </resources>
 </document>

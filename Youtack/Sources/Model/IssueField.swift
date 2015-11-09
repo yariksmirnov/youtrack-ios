@@ -12,64 +12,54 @@ import Mantle
 class IssueField: Object {
     var name: String?
     var value: AnyObject?
-    
-    var user: User?
-    var date: NSDate?
-    var attachment: Attachment?
+    var color: IssueFieldColor?
+    var type: String?
     
     override static func JSONKeyPathsByPropertyKey() -> [NSObject : AnyObject]! {
-        return NSDictionary.mtl_identityPropertyMapWithModel(self)
+        return [
+            "name" : "name",
+            "value" : "value",
+            "color" : "color",
+            "type" : "xsi:type"
+        ]
     }
     
     var stringValue: String? {
-        get { return value as? String }
+        return value as? String
     }
     
     var intValue: Int? {
-        get { return value as? Int }
+        return value as? Int
     }
     
     var doubleValue: Double? {
-        get { return value as? Double }
+        return value as? Double
     }
     
     var rawDictionaryValue: [String:AnyObject]? {
-        get { return value as? [String: AnyObject] }
+        return value as? [String: AnyObject]
     }
     
-    var userValue: User? {
-        get {
-            if user != nil {
-                return user
-            }
-            if let dictionary = rawDictionaryValue {
-                try! user = MTLJSONAdapter().modelFromJSONDictionary(dictionary) as? User
-            }
-            return user
+    lazy var userValue: User? = {
+        if let dictionary = self.rawDictionaryValue {
+            return try! MTLJSONAdapter(modelClass: User.self)
+                .modelFromJSONDictionary(dictionary) as? User
         }
-    }
+        return nil
+    }()
     
-    var dateValue: NSDate? {
-        get {
-            if date != nil {
-                return date
-            }
-            if let timestamp = doubleValue {
-                date = NSDate(timeIntervalSince1970: timestamp)
-            }
-            return date
+    lazy var dateValue: NSDate? = {
+        if let timestamp = self.doubleValue {
+            return NSDate(timeIntervalSince1970: timestamp)
         }
-    }
+        return nil
+    }()
     
-    var attachmentValue: Attachment? {
-        get {
-            if attachment != nil {
-                return attachment
-            }
-            if let dictionary = rawDictionaryValue {
-                try! attachment = MTLJSONAdapter().modelFromJSONDictionary(dictionary) as? Attachment
-            }
-            return attachment
+    lazy var attachmentValue: Attachment? = {
+        if let dictionary = self.rawDictionaryValue {
+            return try! MTLJSONAdapter(modelClass: Attachment.self)
+                .modelFromJSONDictionary(dictionary) as? Attachment
         }
-    }
+        return nil
+    }()
 }

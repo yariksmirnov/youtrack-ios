@@ -13,9 +13,11 @@ public class IssueCell: MKTableViewCell, ConfigurableCell {
     
     @IBOutlet var summaryLabel: UILabel?
     @IBOutlet var numberLabel: UILabel?
+    @IBOutlet var priorityMark: UIView?
 
     public func configure(item: Issue) {
         summaryLabel?.text = item.summary
         numberLabel?.text = item.id
+        priorityMark?.backgroundColor = item.priority?.color?.background
     }
 }

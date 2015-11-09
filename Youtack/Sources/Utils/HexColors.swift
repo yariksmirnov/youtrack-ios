@@ -18,4 +18,12 @@ extension UIColor {
         )
         self.init(red: rgb.0, green: rgb.1, blue: rgb.2, alpha: alpha)
     }
+    
+    convenience init(hexString: String, alpha: CGFloat = 1) {
+        let scanner = NSScanner(string: hexString)
+        var color:UInt32 = 0;
+        scanner.scanHexInt(&color)
+        
+        self.init(hexRGB: Int(color), alpha: alpha)
+    }
 }

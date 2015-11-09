@@ -35,50 +35,50 @@ public class Issue: Object {
     }
     
     var projectShortName: String? {
-        get { return field("projectShortName")?.stringValue }
+        return field("projectShortName")?.stringValue
     }
     
     var numberInProject: Int? {
-        get { return field("numberInProject")?.intValue }
+        return field("numberInProject")?.intValue
     }
     
     var summary: String? {
-        get { return field("summary")?.stringValue }
+        return field("summary")?.stringValue
     }
     
     var updaterName: String? {
-        get { return field("updaterName")?.stringValue }
+        return field("updaterName")?.stringValue
     }
     
     var updaterFullName: String? {
-        get { return field("updaterFullName")?.stringValue }
+        return field("updaterFullName")?.stringValue
     }
     
     var reporterName: String? {
-        get { return field("reporterName")?.stringValue }
+        return field("reporterName")?.stringValue
     }
     
     var reporterFullName: String? {
-        get { return field("reporterFullName")?.stringValue }
+        return field("reporterFullName")?.stringValue
     }
     
     var commentsCount: Int? {
-        get { return field("commentsCount")?.intValue }
+        return field("commentsCount")?.intValue
     }
     
     var state: String? {
-        get { return field("State")?.stringValue }
+        return field("State")?.stringValue
     }
     
     var type: String? {
-        get { return field("Type")?.stringValue }
+        return field("Type")?.stringValue
     }
     
-    var priority: String? {
-        get { return field("Priority")?.stringValue }
+    var priority: IssueField? {
+        return field("Priority")
     }
     
     var assignee: User? {
-        get { return field("Assignee")?.userValue }
+        return field("Assignee")?.userValue
     }
 }
