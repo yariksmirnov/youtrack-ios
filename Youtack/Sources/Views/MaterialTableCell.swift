@@ -8,8 +8,8 @@
 
 import UIKit
 
-public class MaterialTableCell: UITableViewCell, MaterialCard {
-    var materialCardView: MaterialCardView = MaterialCardView()
+public class CardTableCell: UITableViewCell, MaterialCard {
+    var materialCardView: CardView = CardView()
     
     var cardType: MaterialCardType {
         set { materialCardView.cardType = newValue }

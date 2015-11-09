@@ -9,8 +9,8 @@
 import UIKit
 
 public class MaterialCardsDataSource<
-    T: PaginationItem,
-    C: MaterialTableCell where C: ConfigurableCell, C.Item == T> :
+                                    T: PaginationItem,
+                                    C:CardTableCell where C: ConfigurableCell, C.Item == T> :
     PaginationDataSource<T, C>
 {
     

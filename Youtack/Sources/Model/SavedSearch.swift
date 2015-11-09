@@ -12,9 +12,9 @@ import Foundation
 public class SavedSearch : Object {
     
     var name: String?
-    var text: String?
+    var query: String?
     
     override public static func JSONKeyPathsByPropertyKey() -> [NSObject : AnyObject]! {
-        return NSDictionary.mtl_identityPropertyMapWithModel(self)
+        return [ "name" : "name", "query" : "__text" ]
     }
 }

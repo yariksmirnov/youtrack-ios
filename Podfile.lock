@@ -22,7 +22,7 @@ PODS:
   - SwiftyStateMachine (0.2.0)
   - UIColor+BFPaperColors (1.7.1)
   - XCGLogger (3.0)
-  - XMLReader-Arc (1.1)
+  - XMLDictionary (1.4)
 
 DEPENDENCIES:
   - Alamofire
@@ -42,7 +42,7 @@ DEPENDENCIES:
   - SwiftyStateMachine (from `https://github.com/macoscope/SwiftyStateMachine.git`,
     branch `11-swift-2`)
   - XCGLogger
-  - XMLReader-Arc
+  - XMLDictionary
 
 EXTERNAL SOURCES:
   ExSwift:
@@ -88,6 +88,6 @@ SPEC CHECKSUMS:
   SwiftyStateMachine: a1d80e0aafdb0d2a339b330470586881af33f307
   UIColor+BFPaperColors: b1efa4320e2f56c4b14f73232faf967ba0e5b4a2
   XCGLogger: 5802533aff8bafc8b3b9776ab8972576f31d0a4e
-  XMLReader-Arc: 7832c527346fc26511fd6c05ebcee18008c34d6d
+  XMLDictionary: f9f51601ba76678b594ab485f2b00ec1fed23724
 
 COCOAPODS: 0.39.0.beta.5

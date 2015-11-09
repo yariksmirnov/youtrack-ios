@@ -50,6 +50,7 @@ public class Paginator<T: MTLJSONSerializing> {
             case .Success(let array):
                 completion?(array, nil)
             case .Failure(_, let error):
+                Log.error((error as NSError).description)
                 completion?([], error as NSError)
             }
         }

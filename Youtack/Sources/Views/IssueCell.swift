@@ -7,11 +7,15 @@
 //
 
 import UIKit
+import MaterialKit
 
-public class IssueCell: UITableViewCell, ConfigurableCell {
+public class IssueCell: MKTableViewCell, ConfigurableCell {
+    
+    @IBOutlet var summaryLabel: UILabel?
+    @IBOutlet var numberLabel: UILabel?
 
-    public func configure(issues: Issue) {
-        
+    public func configure(item: Issue) {
+        summaryLabel?.text = item.summary
+        numberLabel?.text = item.id
     }
-
 }

@@ -11,10 +11,17 @@ import UIKit
 
 class IssuesDataSource : PaginationDataSource<Issue, IssueCell> {
     
-    required init() {
-        let paginator = Paginator<Item>(resource: "issues/")
+    required init(searchQuery: String) {
+        let paginator = Paginator<Item>(resource: "issue/", query: ["filter" : searchQuery])
         super.init(paginator: paginator!)
-        CellIdentifier = "IssueCell"
+        CellIdentifier = R.nib.issueCell.reuseIdentifier.identifier
+    }
+    
+    override func registerReusableViews(tableView: UITableView) {
+        tableView.registerNib(
+            R.nib.issueCell.instance,
+            forCellReuseIdentifier: R.nib.issueCell.reuseIdentifier.identifier
+        )
     }
     
 }

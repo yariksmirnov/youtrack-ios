@@ -16,7 +16,7 @@ protocol MaterialCard {
     var cardType: MaterialCardType {get set}
 }
 
-class MaterialCardView: UIView, MaterialCard {
+class CardView: UIView, MaterialCard {
     var cardType = MaterialCardType.Middle {
         didSet {
             setNeedsLayout()

@@ -9,6 +9,7 @@
 import Alamofire
 import Mantle
 import XMLReader_Arc
+import XMLDictionary
 
 extension Dictionary {
     func removeRoot() -> AnyObject {
@@ -38,14 +39,13 @@ extension Request {
             if let httpResponse = response {
                 Log.debug("\(httpResponse.URL!) \(httpResponse.statusCode)\nHeaders: \(httpResponse.allHeaderFields as NSDictionary)")
             }
-            do {
-                let XML = try XMLReader.dictionaryForXMLData(validData, options: options)
-                Log.verbose((XML as NSDictionary).debugDescription)
-                let result = XML.removeRoot()
-                return .Success(result)
-            } catch {
-                return .Failure(data, error as NSError)
+            guard let XML = NSDictionary(XMLData: validData) as? [String: AnyObject] else {
+                let error = Utils.error("XMLDictionary failed to return valid dictionary.")
+                return .Failure(data, error)
             }
+            Log.verbose((XML as NSDictionary).debugDescription)
+            let result = XML.removeRoot()
+            return .Success(result)
         }
     }
     
@@ -111,6 +111,7 @@ extension Request {
                     return .Failure(data, error)
                 }
                 do {
+                    Log.verbose((array[0] as! NSDictionary).description)
                     let object = try MTLJSONAdapter.modelsOfClass(T.self, fromJSONArray: array)
                     return .Success(object as! [T])
                 } catch (let error) {

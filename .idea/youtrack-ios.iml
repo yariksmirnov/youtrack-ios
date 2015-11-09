@@ -245,6 +245,12 @@
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/XCGLogger/XCGLogger-umbrella.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/XCGLogger/XCGLogger.modulemap" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/XCGLogger/XCGLogger.xcconfig" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/XMLDictionary/Info.plist" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/XMLDictionary/XMLDictionary-dummy.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/XMLDictionary/XMLDictionary-prefix.pch" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/XMLDictionary/XMLDictionary-umbrella.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/XMLDictionary/XMLDictionary.modulemap" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/XMLDictionary/XMLDictionary.xcconfig" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/XMLReader-Arc/Info.plist" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/XMLReader-Arc/XMLReader-Arc-dummy.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/XMLReader-Arc/XMLReader-Arc-prefix.pch" isTestSource="false" />
@@ -254,13 +260,16 @@
       <sourceFolder url="file://$MODULE_DIR$/Pods/UIColor+BFPaperColors/UIColor+BFPaperColors/UIColor+BFPaperColors.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/UIColor+BFPaperColors/UIColor+BFPaperColors/UIColor+BFPaperColors.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/XCGLogger/XCGLogger/Library/XCGLogger/XCGLogger.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/XMLDictionary/XMLDictionary/XMLDictionary.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/XMLDictionary/XMLDictionary/XMLDictionary.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/XMLReader-Arc/XMLReader.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/XMLReader-Arc/XMLReader.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Assets.xcassets" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Info.plist" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Interface/Base.lproj/LaunchScreen.storyboard" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Youtack/Interface/Dashboard.storyboard" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Interface/Hosts.storyboard" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Youtack/Interface/Issues.storyboard" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Youtack/Interface/IssueCell.xib" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Interface/Main.storyboard" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Interface/Settings.storyboard" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Resources/Fonts/Roboto-Black.ttf" isTestSource="false" />
@@ -281,6 +290,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Resources/Fonts/RobotoCondensed-Light.ttf" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Resources/Fonts/RobotoCondensed-LightItalic.ttf" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Resources/Fonts/RobotoCondensed-Regular.ttf" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Youtack/Resources/R.generated.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/APIClient/APIClient.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/APIClient/Paginator.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/APIClient/Requests.swift" isTestSource="false" />
@@ -293,11 +303,14 @@
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/DataSource/DataSource.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/DataSource/PaginationDataSource.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/DataSource/PlaceholderView.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/Model/Attachment.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/Model/Host.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/Model/Issue.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/Model/IssueField.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/Model/Object.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/Model/SavedSearch.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/Model/User.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/Utils/Extensions.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/Utils/HexColors.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/Utils/Notifications.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/Utils/Utils.swift" isTestSource="false" />
@@ -305,8 +318,9 @@
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/ViewControllers/Generic/MaterialCardsDataSource.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/ViewControllers/Generic/NavigationController.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/ViewControllers/Generic/ViewController.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/ViewControllers/Issues/DashboardViewController.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/ViewControllers/Issues/IssuesDataSource.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/ViewControllers/Issues/IssuesViewController.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/ViewControllers/Issues/IssuesListViewController.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/ViewControllers/Issues/SavedSearchesDataSource.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/ViewControllers/Main/MainViewController.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/ViewControllers/Settings/Hosts/HostCell.swift" isTestSource="false" />
@@ -314,6 +328,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/ViewControllers/Settings/Hosts/HostsListViewContoller.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/ViewControllers/Settings/SettingsViewController.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/Views/IssueCell.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/Views/ListCell.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/Views/MaterialCard.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/Views/MaterialTableCell.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/Views/SavedSearchCell.swift" isTestSource="false" />

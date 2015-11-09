@@ -9,7 +9,7 @@
 import Mantle
 
 public class Object: MTLModel, MTLJSONSerializing {
-    var id: Int = -1
+    var id: String = ""
     
     public class func JSONKeyPathsByPropertyKey() -> [NSObject : AnyObject]! {
         return Dictionary()

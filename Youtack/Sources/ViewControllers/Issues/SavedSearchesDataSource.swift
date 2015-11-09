@@ -9,7 +9,7 @@
 import UIKit
 
 
-public class SavedSearchesDataSource : MaterialCardsDataSource<SavedSearch, SavedSearchCell> {
+public class SavedSearchesDataSource : PaginationDataSource<SavedSearch, SavedSearchCell> {
     
     init() {
         let paginator = Paginator<SavedSearch>(resource: "user/search")

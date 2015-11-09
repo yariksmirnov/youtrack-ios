@@ -20,7 +20,7 @@ public class APIClient {
             }
         }
     }
-    var entityID: Int?
+    var entityID: String?
     
     public init?() {
         self.session = Session.active
@@ -35,7 +35,7 @@ public class APIClient {
         self.entityID = entity.id
     }
     
-    public init(session: Session, entityID: Int) {
+    public init(session: Session, entityID: String) {
         self.session = session
         self.entityID = entityID
     }
@@ -47,7 +47,7 @@ public class APIClient {
         self.init(session: active, entity: entity)
     }
     
-    convenience public init?(entityID: Int) {
+    convenience public init?(entityID: String) {
         guard let active = Session.active else {
             return nil
         }

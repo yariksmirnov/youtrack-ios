@@ -8,6 +8,7 @@
 
 import UIKit
 import XCGLogger
+import XMLDictionary
 
 let Log = XCGLogger.defaultInstance()
 
@@ -17,6 +18,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var mainViewController: MainViewController!
     
+    static var instance: AppDelegate {
+        get {
+            return UIApplication.sharedApplication().delegate as! AppDelegate
+        }
+    }
 
     func application(
         application: UIApplication,
@@ -24,6 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         -> Bool
     {
         setupLogger()
+        setupXMLDictionary()
 
         mainViewController = window?.rootViewController as! MainViewController
         HostsManager.instance.loadConfiguredHosts()
@@ -52,6 +59,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             writeToFile: false,
             fileLogLevel: nil
         )
+    }
+    
+    func setupXMLDictionary() {
+        let xmlReader = XMLDictionaryParser.sharedInstance()
+        xmlReader.attributesMode = .Unprefixed
+        xmlReader.nodeNameMode = .Never
     }
 }
 

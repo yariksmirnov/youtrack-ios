@@ -40,6 +40,10 @@ public class ListViewController: ViewController, UITableViewDelegate {
         dataSource?.loadContent(false)
     }
     
+    public override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return .LightContent
+    }
+    
     func layoutView() {
         layoutTableView()
     }
@@ -47,6 +51,9 @@ public class ListViewController: ViewController, UITableViewDelegate {
     func layoutTableView() {
         view.insertSubview(tableView, atIndex: 0)
         tableView.delegate = self
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.backgroundColor = UIColor(gray: 232)
+        tableView.separatorStyle = .None
     }
     
     func attachDataSource() {
@@ -75,4 +82,22 @@ public class ListViewController: ViewController, UITableViewDelegate {
         tableView.reloadData()
     }
     
+    override func addCustomNavigationBar(height: CGFloat = 64) {
+        super.addCustomNavigationBar(height)
+        automaticallyAdjustsScrollViewInsets = false
+        tableView.contentInset = UIEdgeInsetsMake(height, 0, tabBarScrollBottomInset(), 0)
+        tableView.separatorInset = tableView.contentInset
+    }
+    
+    func tabBarScrollBottomInset() -> CGFloat
+    {
+        let mainVC = AppDelegate.instance.mainViewController
+        let tabBarHeight = mainVC.tabBar.bounds.size.height
+        if (self.navigationController != nil && mainVC.viewControllers!.contains(self.navigationController!)) ||
+            mainVC.viewControllers!.contains(self)
+        {
+            return tabBarHeight
+        }
+        return 0
+    }
 }

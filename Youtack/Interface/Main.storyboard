@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2gp-P7-LZN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2gp-P7-LZN">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <scenes>
         <!--Main View Controller-->
@@ -11,6 +11,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" id="zq5-6d-DyP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
@@ -22,10 +23,10 @@
             </objects>
             <point key="canvasLocation" x="-524" y="-99"/>
         </scene>
-        <!--Issues-->
+        <!--Dashboard-->
         <scene sceneID="FBg-Bb-XUj">
             <objects>
-                <viewControllerPlaceholder storyboardName="Issues" id="OWI-E5-b5h" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Dashboard" id="OWI-E5-b5h" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Issues" id="Z2h-kb-e5b"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bOA-n3-G6e" userLabel="First Responder" sceneMemberID="firstResponder"/>
