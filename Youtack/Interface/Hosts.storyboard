@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Cjd-CQ-6qK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Cjd-CQ-6qK">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -12,7 +12,6 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="XLk-5c-20v">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="HostCell" editingAccessoryType="detailDisclosureButton" id="s90-cF-vXm" customClass="HostCell" customModule="Youtack" customModuleProvider="target">
@@ -21,9 +20,7 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="s90-cF-vXm" id="Ovb-A2-PlG">
                                     <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <animations/>
                                 </tableViewCellContentView>
-                                <animations/>
                                 <connections>
                                     <segue destination="k2K-QD-zlV" kind="showDetail" identifier="HostDetailsSegueIdentifier" trigger="accessoryAction" id="8sM-Lg-d4Z"/>
                                 </connections>
@@ -56,7 +53,6 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Dca-qa-7EC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
                             <tableViewSection id="NUS-Eh-pdO">
@@ -70,12 +66,10 @@
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aLd-kL-DsC">
                                                     <rect key="frame" x="16" y="7" width="576" height="30"/>
-                                                    <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
-                                            <animations/>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="aLd-kL-DsC" secondAttribute="trailing" constant="8" id="K8X-16-ZVs"/>
                                                 <constraint firstItem="aLd-kL-DsC" firstAttribute="top" secondItem="dII-IE-Na7" secondAttribute="top" constant="7" id="VSw-a0-mj1"/>
@@ -83,7 +77,6 @@
                                                 <constraint firstItem="aLd-kL-DsC" firstAttribute="leading" secondItem="dII-IE-Na7" secondAttribute="leading" constant="16" id="x2S-7f-N2i"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <animations/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Ur4-Mn-1Fe">
                                         <rect key="frame" x="0.0" y="108" width="600" height="44"/>
@@ -94,12 +87,10 @@
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Host" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xQf-Ga-HQ2">
                                                     <rect key="frame" x="16" y="7" width="576" height="30"/>
-                                                    <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
-                                            <animations/>
                                             <constraints>
                                                 <constraint firstItem="xQf-Ga-HQ2" firstAttribute="top" secondItem="TIp-0O-uxs" secondAttribute="top" constant="7" id="NJk-SJ-tmM"/>
                                                 <constraint firstAttribute="trailing" secondItem="xQf-Ga-HQ2" secondAttribute="trailing" constant="8" id="WQh-qq-LPH"/>
@@ -107,7 +98,6 @@
                                                 <constraint firstAttribute="bottom" secondItem="xQf-Ga-HQ2" secondAttribute="bottom" constant="6.5" id="jN7-Ow-SmD"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <animations/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="T8D-gn-BG7">
                                         <rect key="frame" x="0.0" y="152" width="600" height="44"/>
@@ -118,12 +108,10 @@
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Login" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B0n-Nt-PdG">
                                                     <rect key="frame" x="16" y="7" width="576" height="30"/>
-                                                    <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
-                                            <animations/>
                                             <constraints>
                                                 <constraint firstItem="B0n-Nt-PdG" firstAttribute="leading" secondItem="5Xg-Ie-QLc" secondAttribute="leading" constant="16" id="ReX-Bu-qgn"/>
                                                 <constraint firstAttribute="trailing" secondItem="B0n-Nt-PdG" secondAttribute="trailing" constant="8" id="ctw-Cg-6IE"/>
@@ -131,7 +119,6 @@
                                                 <constraint firstAttribute="bottom" secondItem="B0n-Nt-PdG" secondAttribute="bottom" constant="6.5" id="w9s-OL-boI"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <animations/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="C8h-th-SyY">
                                         <rect key="frame" x="0.0" y="196" width="600" height="44"/>
@@ -142,12 +129,10 @@
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f7h-Kb-cUG">
                                                     <rect key="frame" x="16" y="7" width="576" height="30"/>
-                                                    <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
-                                            <animations/>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="f7h-Kb-cUG" secondAttribute="trailing" constant="8" id="bnD-gM-aQQ"/>
                                                 <constraint firstItem="f7h-Kb-cUG" firstAttribute="top" secondItem="Nf3-dv-mJI" secondAttribute="top" constant="7" id="hBm-uR-Nbm"/>
@@ -155,7 +140,6 @@
                                                 <constraint firstItem="f7h-Kb-cUG" firstAttribute="leading" secondItem="Nf3-dv-mJI" secondAttribute="leading" constant="16" id="zJT-GG-iTH"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <animations/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="rAG-QS-5es">
                                         <rect key="frame" x="0.0" y="240" width="600" height="44"/>
@@ -166,17 +150,14 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Required SSL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="shK-7j-TeS">
                                                     <rect key="frame" x="16" y="10.5" width="114.5" height="23"/>
-                                                    <animations/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RN8-Qf-m0J">
                                                     <rect key="frame" x="531" y="6" width="51" height="31"/>
-                                                    <animations/>
                                                 </switch>
                                             </subviews>
-                                            <animations/>
                                             <constraints>
                                                 <constraint firstItem="shK-7j-TeS" firstAttribute="leading" secondItem="263-dh-fMD" secondAttribute="leadingMargin" constant="8" id="A9F-Yf-Uum"/>
                                                 <constraint firstAttribute="trailing" secondItem="RN8-Qf-m0J" secondAttribute="trailing" constant="20" id="I1P-6O-65V"/>
@@ -184,7 +165,6 @@
                                                 <constraint firstItem="shK-7j-TeS" firstAttribute="centerY" secondItem="263-dh-fMD" secondAttribute="centerY" id="OWN-Yb-5Lu"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <animations/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -226,7 +206,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zgx-iZ-PgD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

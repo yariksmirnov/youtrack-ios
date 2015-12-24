@@ -12,38 +12,30 @@ import Alamofire
 import Mantle
 import ExSwift
 
-public class Paginator<T: MTLJSONSerializing> {
+class Paginator<T: MTLJSONSerializing>: APIClient {
     
     var limit: Int = 20
     var offset: Int = 0
     var resource: String
     var query: [String : AnyObject]?
-    var session: Session
     
-    public typealias PaginatorResponseHandler = ([T], NSError?) -> Void
+    typealias PaginatorResponseHandler = ([T], NSError?) -> Void
     
-    init(session: Session, resource: String, query: [String: AnyObject]? = nil, limit: Int = 20) {
-        self.session = session
+    required init(resource: String, query: [String: AnyObject]? = nil, limit: Int = 20) {
         self.resource = resource
+        super.init(session: AppDelegate.instance.context.session)
         self.query = query
         self.limit = limit
     }
     
-    convenience init?(resource: String, query: [String: AnyObject]? = nil) {
-        guard let session = Session.active else {
-            return nil
-        }
-        self.init(session: session, resource: resource, query: query)
-    }
-    
-    public func load(page: Int = 1, completion: PaginatorResponseHandler? = nil) {
-        let url = session.host.restAPI().URLByAppendingPathComponent(resource)
-        let parameters = [
+    func load(page: Int = 1, completion: PaginatorResponseHandler? = nil) {
+        guard let url = router?.restUrl().URLByAppendingPathComponent(resource) else { return }
+        var parameters = [
             "limit" : limit,
             "offset" : offsetFromPage(page)
-        ]
+        ] as [String: AnyObject]
         if query != nil {
-            parameters | query!
+            parameters = parameters | query!
         }
         request(.GET, url, parameters: parameters).responseArray() { (request, response, result: Result<[T]>) in
             switch result {

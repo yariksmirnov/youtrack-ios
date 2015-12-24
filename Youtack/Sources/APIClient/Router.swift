@@ -7,37 +7,41 @@
 //
 
 import Foundation
-
 import Alamofire
 
-enum Router: URLRequestConvertible {
+class Router {
     
-    case Login(host: Host)
-    case CurrentUser
+    var host: Host
     
-    func restAPI() -> NSURL {
-        return Session.active!.host.restAPI()
+    init(host: Host) {
+        self.host = host
     }
     
-    var URLRequest: NSMutableURLRequest {
-        let components: (method: Alamofire.Method, URL: NSURL, query: [String: AnyObject]?) = {
-            switch self {
-            case .Login(let host):
-                return (
-                    .POST,
-                    host.restAPI().URLByAppendingPathComponent("user/login"),
-                    [ "login" : host.login!, "password" : host.password!]
-                )
-            case CurrentUser:
-                return (
-                    .GET,
-                    restAPI().URLByAppendingPathComponent("user/current"),
-                    nil
-                )
-            }
-        }()
-        let mutableURLRequest = NSMutableURLRequest(URL: components.URL)
-        mutableURLRequest.HTTPMethod = components.method.rawValue
-        return ParameterEncoding.URL.encode(mutableURLRequest, parameters: components.query).0
+    func baseUrl() -> NSURL! {
+        let components = NSURLComponents()
+        components.scheme = "https"
+        components.host = host.url
+        return components.URL
     }
+    
+    func restUrl() -> NSURL {
+        return baseUrl().URLByAppendingPathComponent("rest")
+    }
+    
+    func me() -> NSURL {
+        return restUrl().URLByAppendingPathComponent("user/current")
+    }
+    
+    func loginUrlRequest(login: String, password: String) -> NSMutableURLRequest {
+        let url = restUrl().URLByAppendingPathComponent("user/login")
+        let request = NSMutableURLRequest(URL: url)
+        request.HTTPMethod = Method.POST.rawValue
+        let params = [ "login" : login, "password" : password]
+        return ParameterEncoding.URL.encode(request, parameters: params).0
+    }
+    
+    func allProjects() -> NSURL {
+        return restUrl().URLByAppendingPathComponent("project/all")
+    }
+    
 }

@@ -8,10 +8,11 @@
 
 import Alamofire
 
-public class UserAPI: APIClient {
+class UserAPI: APIClient {
     
-    public func getCurrentUser(completion:((user: User?, error: NSError?) -> Void)?) {
-        currentRequest = request(Router.CurrentUser)
+    func getCurrentUser(completion:((user: User?, error: NSError?) -> Void)?) {
+        guard let url = router?.me() else { return }
+        currentRequest = request(.GET, url)
             .validate()
             .responseObject() { (request, response, result: Result<User>)  in
                 switch result {

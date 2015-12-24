@@ -12,6 +12,10 @@ public class ViewController: UIViewController {
     
     var navigationBar: UINavigationBar?
     var navItem: UINavigationItem?
+    
+    lazy var context: Context = {
+        return AppDelegate.instance.context
+    }()
 
     override public func viewDidLoad() {
         super.viewDidLoad()

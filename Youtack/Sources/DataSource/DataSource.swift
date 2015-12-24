@@ -70,15 +70,21 @@ protocol ContentLoading {
     func cancelLoad()
 }
 
-public protocol DataSourceItem: Equatable {}
+public protocol DataSourceItem: AnyObject, Equatable {}
 
 protocol DataSource: UITableViewDataSource, ContentLoading {
+    
     weak var tableViewUpdater: DataSourceTableViewUpdater? {get set}
     weak var contenLoadingDelegate: DataSourceContentLoadingDelegate? {get set}
     
     func registerReusableViews(tableView: UITableView)
     
     func reset()
+    
+    var numberOfItems: Int {get}
+    var dataSourceItems: [AnyObject] {set get}
+    
+    func dataSourceItem(indexPath: NSIndexPath) -> AnyObject?
 }
 
 public protocol ConfigurableCell {
@@ -92,6 +98,21 @@ public class BasicDataSource<T: DataSourceItem, C: UITableViewCell where C: Conf
     typealias TableCell = C
     
     var items: [Item] = []
+    
+    var numberOfItems: Int {
+        return items.count
+    }
+    
+    var dataSourceItems: [AnyObject] {
+        get {
+            return items
+        }
+        set(newItems) {
+            if let validItems = newItems as? [Item] {
+                items = validItems
+            }
+        }
+    }
     
     weak var tableViewUpdater: DataSourceTableViewUpdater?
     weak var contenLoadingDelegate: DataSourceContentLoadingDelegate?
@@ -132,6 +153,10 @@ public class BasicDataSource<T: DataSourceItem, C: UITableViewCell where C: Conf
         return nil
     }
     
+    func dataSourceItem(indexPath: NSIndexPath) -> AnyObject? {
+        return item(indexPath)
+    }
+    
     func indexPath(item: Item) -> NSIndexPath? {
         if let index = items.indexOf(item) {
             return NSIndexPath(forRow: index, inSection: 0)
@@ -163,7 +188,7 @@ public class BasicDataSource<T: DataSourceItem, C: UITableViewCell where C: Conf
     func loadContent(forceUpdate: Bool) {
         if state != LoadState.Load && (items.count == 0 || forceUpdate) {
             dispatch_async(dispatch_get_main_queue()) {
-                self.__loadContent()
+                self._loadContent()
             }
         }
     }
@@ -173,7 +198,7 @@ public class BasicDataSource<T: DataSourceItem, C: UITableViewCell where C: Conf
         request?.cancel()
     }
     
-    func __loadContent() {
+    private func _loadContent() {
         initializeLoader()
         stateMachine.handleEvent(.Load)
         ContentLoader?() { [weak self] updater in

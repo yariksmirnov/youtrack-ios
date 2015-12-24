@@ -11,9 +11,17 @@ import UIKit
 
 class IssuesDataSource : PaginationDataSource<Issue, IssueCell> {
     
-    required init(searchQuery: String) {
-        let paginator = Paginator<Item>(resource: "issue/", query: ["filter" : searchQuery])
-        super.init(paginator: paginator!)
+    required init(project: Project? = nil, searchQuery: String? = nil) {
+        var params = [String: String]()
+        if let query = searchQuery {
+            params["filter"] = query
+        }
+        var resource = "issue/"
+        if let projId = project?.id {
+            resource = "issue/byproject/\(projId)"
+        }
+        let paginator = Paginator<Item>(resource: resource, query: params)
+        super.init(paginator: paginator)
         CellIdentifier = R.nib.issueCell.reuseIdentifier.identifier
     }
     

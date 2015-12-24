@@ -8,58 +8,36 @@
 
 import Alamofire
 import Observable
+import KeychainAccess
 
 public class Session {
     
     static let SessionDidAuthorizeNotification = "SessionDidAuthorizeNotification"
     static let SessionDidCloseNotification = "SessionDidCloseNotification"
     
-    public static var active: Session?
+    var host: Host?
+    var keychain = Keychain(service: NSBundle.mainBundle().bundleIdentifier!)
     
-    let host: Host
-    
-    init(host: Host) {
-        self.host = host
+    init() {
+        restoreAuthorization()
     }
     
-    public static func restoreAuthorization(host: Host) -> Bool {
-        let session = Session(host: host)
-        if session.authorized {
-            active = session
-            NSNotificationCenter.post(Session.SessionDidAuthorizeNotification, object: session)
-            active?.loadCurrentUserInfo()
+    public func restoreAuthorization() -> Bool {
+        guard let data = self.keychain[data: "host"] else { return false }
+        self.host = NSKeyedUnarchiver.unarchiveObjectWithData(data) as? Host
+        if authorized {
+            NSNotificationCenter.post(Session.SessionDidAuthorizeNotification, object: self)
             return true
         }
         return false
     }
     
-    public func login(completion: ((success: Bool) -> Void)? = nil) {
-        request(Router.Login(host: host)).validate().responseString { request, response, result in
-            switch result {
-            case .Success(_):
-                if let headers = response?.allHeaderFields as? [String : String] {
-                    do {
-                        try self.authorize(headers)
-                        self.loadCurrentUserInfo()
-                        completion?(success: true)
-                        return
-                    } catch {
-                        //no-opt
-                    }
-                }
-                completion?(success: false)
-            case .Failure(let failureData, let error):
-                if let data = failureData {
-                    Log.error("Login Failed: \(NSString(data: data, encoding: NSUTF8StringEncoding)!) \(error)")
-                }
-                completion?(success: false)
-            }
-        }
-    }
-    
+        
     var authorized: Bool {
         get {
-            if let cookies = NSHTTPCookieStorage.sharedHTTPCookieStorage().cookiesForURL(host.baseURL()) {
+            guard let host = host else { return false }
+            let baseUrl = Router(host: host).baseUrl()
+            if let cookies = NSHTTPCookieStorage.sharedHTTPCookieStorage().cookiesForURL(baseUrl) {
                 for cookie in cookies {
                     if cookie.expiresDate?.compare(NSDate()) == .OrderedDescending {
                         return true
@@ -70,25 +48,20 @@ public class Session {
         }
     }
     
-    func authorize(headers: [String: String]) throws {
+    func authorize(host: Host, headers: [String: String]) -> Bool {
         let cookies = NSHTTPCookie.cookiesWithResponseHeaderFields(
             headers,
-            forURL: host.baseURL()
+            forURL: Router(host: host).baseUrl()
         )
         if let authCookie = cookies.first {
             NSHTTPCookieStorage.sharedHTTPCookieStorage().setCookie(authCookie)
-            Session.active = self
-            return
+            self.host = host
+            let data = NSKeyedArchiver.archivedDataWithRootObject(host)
+            keychain[data: "host"] = data
+            return true
         }
+        return false
     }
-    
-    func loadCurrentUserInfo() {
-        let api = UserAPI()!
-        api.getCurrentUser { (user, error) -> Void in
-            User.current.value = user
-        }
-    }
-    
 }
 
 

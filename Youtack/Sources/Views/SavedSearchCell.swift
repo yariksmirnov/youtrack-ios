@@ -28,7 +28,7 @@ public class SavedSearchCell: UITableViewCell, ConfigurableCell {
     func defaultInit() {
         selectionStyle = .None
         contentView.addSubview(separatorView)
-        separatorView.autoSetDimension(.Height, toSize: 1.0/UIScreen.mainScreen().scale)
+        separatorView.autoSetDimension(.Height, toSize: 1.0)
         separatorView.autoPinEdgesToSuperviewEdgesWithInsets(UIEdgeInsetsZero, excludingEdge: .Top)
         separatorView.backgroundColor = UIColor(gray: 240)
     }

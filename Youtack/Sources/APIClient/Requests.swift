@@ -8,7 +8,6 @@
 
 import Alamofire
 import Mantle
-import XMLReader_Arc
 import XMLDictionary
 
 extension Dictionary {
@@ -27,8 +26,7 @@ extension Dictionary {
 
 extension Request {
     
-    public static func XMLResponseSerializer(
-        options options: XMLReaderOptions = 0)
+    public static func XMLResponseSerializer()
         -> GenericResponseSerializer<AnyObject>
     {
         return GenericResponseSerializer { _, response, data in
@@ -50,19 +48,43 @@ extension Request {
     }
     
     public func responseXML(
-        options options: XMLReaderOptions = 0,
         completionHandler: (NSURLRequest?, NSHTTPURLResponse?, Result<AnyObject>) -> Void)
         -> Self
     {
         Log.debug((self as! CustomStringConvertible).description)
         return response(
-            responseSerializer: Request.XMLResponseSerializer(options: options),
+            responseSerializer: Request.XMLResponseSerializer(),
             completionHandler: completionHandler
         )
     }
 }
 
 extension Request {
+    
+    func responseError(completionHandler: (NSError?) -> Void) -> Self {
+        Log.debug((self as! CustomStringConvertible).description)
+        return response(responseSerializer: Request.stringResponseSerializer() ) { request, response, result in
+            switch result {
+            case .Success(_):
+                break
+            case .Failure(let data, let error as NSError):
+                let xmlReader = XMLDictionaryParser()
+                xmlReader.attributesMode = .Unprefixed
+                xmlReader.nodeNameMode = .Never
+                xmlReader.wrapRootNode = true
+                guard let errorData = data,
+                      let xml = xmlReader.dictionaryWithData(errorData),
+                      let failureReason = xml["error"] as? String else {
+                        completionHandler(error)
+                        return
+                }
+                let error = Utils.error(failureReason)
+                completionHandler(error)
+            default:
+                break
+            }
+        }
+    }
     
     public func responseObject<T: MTLJSONSerializing>(
         completionHandler: (NSURLRequest?, NSHTTPURLResponse?, Result<T>) -> Void

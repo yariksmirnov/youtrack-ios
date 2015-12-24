@@ -7,35 +7,73 @@
 //
 
 import UIKit
-import MaterialDesignColor
 
-public class DashboardViewController: ListViewController {
+class DashboardViewController: ListViewController {
     
-    var searchesDataSource: SavedSearchesDataSource? {
-        get { return dataSource as? SavedSearchesDataSource }
+    var contextsTableView = UITableView()
+    var contextsDataSource = SavedSearchesDataSource()
+    var contextsAdapter: BasicAdapter!
+    var expandableTitleView = ExpandableTitleView()
+    @IBOutlet var searchBarContainer: UIView!
+    
+    var selectedProject: Project?
+    var savedSearch: SavedSearch?
+    var savedSearchesViewController = SavedSearchesViewController()
+    var projectsViewController = ProjectsViewController()
+    
+    var issuesDataSource: IssuesDataSource? {
+        get { return dataSource as? IssuesDataSource }
     }
 
-    override public func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Dashboard"
+        layoutTitleView()
+        definesPresentationContext = true
+        
+        savedSearchesViewController.attachDataSource()
+        savedSearchesViewController.dataSource?.loadContent(false)
+        savedSearchesViewController.selectedContext += { old, new in
+            self.onSavedSearches()
+        }
+        
+        projectsViewController.attachDataSource()
+        projectsViewController.dataSource?.loadContent(false)
+        projectsViewController.selectedProject += { old, new in
+            self.onTitleView()
+        }
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        contextsDataSource.loadContent(false)
     }
     
     override func layoutTableView() {
         super.layoutTableView()
-        tableView.autoPinEdgesToSuperviewEdges()
-        tableView.estimatedRowHeight = 44
+        automaticallyAdjustsScrollViewInsets = false
+        tableView.estimatedRowHeight = 88
+        tableView.autoPinEdgesToSuperviewEdgesWithInsets(
+            UIEdgeInsetsZero,
+            excludingEdge: .Top)
+        tableView.autoPinEdge(.Top, toEdge: .Bottom, ofView: searchBarContainer)
     }
     
     override func buildDataSource() -> DataSource? {
-        return SavedSearchesDataSource()
+        return IssuesDataSource(project: selectedProject, searchQuery: savedSearch?.query)
+    }
+    
+    func updateDataSource() {
+        resetDataSource()
+        attachDataSource()
+        dataSource?.loadContent(false)
     }
     
     //MARK: TableViewDelegate
     
-    public func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if let search = searchesDataSource?.item(indexPath) {
-            let issuesVC = IssuesListViewController(savedSearch: search)
-            navigationController?.pushViewController(issuesVC, animated: true)
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if let issue = issuesDataSource?.item(indexPath) {
+            let issueVC = IssueViewController(issue: issue)
+            navigationController?.pushViewController(issueVC, animated: true)
         }
     }
 }

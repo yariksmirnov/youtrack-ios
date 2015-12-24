@@ -8,9 +8,10 @@
 
 import Alamofire
 
-public class APIClient {
+class APIClient {
     
-    let session: Session!
+    let session: Session
+    var router: Router?
     var currentRequest: Request?
     
     var entity: Object? {
@@ -22,39 +23,28 @@ public class APIClient {
     }
     var entityID: String?
     
-    public init?() {
-        self.session = Session.active
-        if self.session == nil {
-            return nil
+    required init(session: Session) {
+        self.session = session
+        if let host = session.host {
+            self.router = Router(host: host)
         }
     }
     
-    public init(session: Session, entity: Object) {
-        self.session = session
+    convenience init() {
+        self.init(session: AppDelegate.instance.context.session)
+    }
+    
+    convenience init(entityId: String) {
+        self.init()
+        self.entityID = entityId
+    }
+    
+    convenience init(entity: Object) {
+        self.init()
         self.entity = entity
-        self.entityID = entity.id
     }
     
-    public init(session: Session, entityID: String) {
-        self.session = session
-        self.entityID = entityID
-    }
-    
-    convenience public init?(entity: Object) {
-        guard let active = Session.active else {
-            return nil
-        }
-        self.init(session: active, entity: entity)
-    }
-    
-    convenience public init?(entityID: String) {
-        guard let active = Session.active else {
-            return nil
-        }
-        self.init(session: active, entityID: entityID)
-    }
-    
-    public func cancelRequest() {
+    func cancelRequest() {
         currentRequest?.cancel()
     }
     

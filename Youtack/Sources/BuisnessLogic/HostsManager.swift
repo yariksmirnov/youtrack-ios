@@ -52,9 +52,6 @@ public class HostsManager {
                 let hosts = NSKeyedUnarchiver.unarchiveObjectWithData(data) as? [Host]
                 dispatch_async(dispatch_get_main_queue()) {
                     self.hosts = hosts ?? []
-                    for host in self.hosts {
-                        Session.restoreAuthorization(host)
-                    }
                     completion?(hosts: self.hosts)
                 }
             }

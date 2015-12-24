@@ -9,11 +9,10 @@
 import UIKit
 import Mantle;
 
-public class ListViewController: ViewController, UITableViewDelegate {
+public class ListViewController: ViewController, UITableViewDelegate, DataSourceTableViewUpdater {
     
     var tableView: UITableView = UITableView()
     var dataSource: DataSource?
-    var dataSourceAdapter: BasicAdapter?
     
     override public func viewDidLoad() {
         super.viewDidLoad()
@@ -54,10 +53,11 @@ public class ListViewController: ViewController, UITableViewDelegate {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.backgroundColor = UIColor(gray: 236)
         tableView.separatorStyle = .None
+        tableView.contentInset = UIEdgeInsetsMake(0, 0, tabBarScrollBottomInset(), 0)
     }
     
     func attachDataSource() {
-        if Session.active != nil {
+        if context.session.authorized {
             if let ds = self.buildDataSource() {
                 dataSource = ds
                 configureDataSource()
@@ -70,8 +70,7 @@ public class ListViewController: ViewController, UITableViewDelegate {
     }
     
     func configureDataSource() {
-        dataSourceAdapter = BasicAdapter(tableView: tableView)
-        dataSource?.tableViewUpdater = dataSourceAdapter
+        dataSource?.tableViewUpdater = self
         tableView.dataSource = dataSource
         dataSource?.registerReusableViews(tableView)
     }
@@ -100,4 +99,20 @@ public class ListViewController: ViewController, UITableViewDelegate {
         }
         return 0
     }
+    
+    //MARK: DataSourceUpdater
+    
+    func dataSourceDidReloadData<T, C>(dataSource: BasicDataSource<T, C>) {
+        self.tableView.reloadData()
+    }
+    
+    func dataSource<T, C>(dataSource: BasicDataSource<T,C>,
+        updateItemAtIndexPath indexPath: NSIndexPath,
+        updateAction: (cell: UITableViewCell) -> Void)
+    {
+        if let cell = tableView.cellForRowAtIndexPath(indexPath) {
+            updateAction(cell: cell)
+        }
+    }
+    
 }

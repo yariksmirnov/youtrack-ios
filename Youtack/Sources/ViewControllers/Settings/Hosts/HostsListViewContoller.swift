@@ -100,12 +100,6 @@ class HostsListViewController: UITableViewController, HostDetailsViewContorllerD
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let session = Session(host: hosts[indexPath.row])
-        session.login() { [weak self] success in
-            if success {
-                self?.navigationController?.popToRootViewControllerAnimated(true)
-            }
-        }
     }
 }
 

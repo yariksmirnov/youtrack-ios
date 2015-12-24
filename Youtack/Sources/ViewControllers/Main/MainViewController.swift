@@ -27,5 +27,6 @@ class MainViewController: UITabBarController {
         ]
         UINavigationBar.appearance().titleTextAttributes = titleAttribs
         UINavigationBar.appearance().barTintColor = UIColor(hexRGB: 0x2852ad)
+        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
     }
 }

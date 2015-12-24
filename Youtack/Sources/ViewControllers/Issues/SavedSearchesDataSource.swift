@@ -12,8 +12,7 @@ import UIKit
 public class SavedSearchesDataSource : PaginationDataSource<SavedSearch, SavedSearchCell> {
     
     init() {
-        let paginator = Paginator<SavedSearch>(resource: "user/search")
-        super.init(paginator: paginator!)
+        super.init(paginator:Paginator<SavedSearch>(resource: "user/search"))
         CellIdentifier = "SavedSearchCell"
     }
     

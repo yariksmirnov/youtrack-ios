@@ -18,6 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var mainViewController: MainViewController!
     
+    var context: Context = AppContext()
+    
     static var instance: AppDelegate {
         get {
             return UIApplication.sharedApplication().delegate as! AppDelegate
@@ -33,8 +35,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setupXMLDictionary()
 
         mainViewController = window?.rootViewController as! MainViewController
-        HostsManager.instance.loadConfiguredHosts()
+        
+        if !context.session.authorized {
+            window?.makeKeyAndVisible()
+            presentLogin(true)
+        }
+        
         return true
+    }
+    
+    func presentLogin(onLaunch: Bool = false) {
+        guard let loginVC = R.storyboard.login.initialViewController else { return }
+        if onLaunch {
+            mainViewController.view.addSubview(loginVC.view)
+            loginVC.view.frame = mainViewController.view.bounds
+            let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(0.2 * Double(NSEC_PER_SEC)))
+            dispatch_after(delayTime, dispatch_get_main_queue()) {
+                self.mainViewController.presentViewController(loginVC, animated: false, completion: nil)
+            }
+        } else {
+            mainViewController.presentViewController(loginVC, animated: true, completion: nil)
+        }
     }
     
     func setupLogger() {

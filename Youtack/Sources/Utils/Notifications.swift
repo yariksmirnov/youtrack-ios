@@ -19,7 +19,7 @@ var NotificationsObserversKey = "NotificationsObserversKey"
 
 extension NSObject {
     
-    func subscribe(name: String, action: (NSNotification) -> Void) {
+    func subscribe(name: String, object: AnyObject? = nil, action: (NSNotification) -> Void) {
         var observers = objc_getAssociatedObject(self, &NotificationsObserversKey) as? NSMutableDictionary
         if observers == nil {
             observers = NSMutableDictionary()
@@ -27,7 +27,7 @@ extension NSObject {
         }
         let observer = NSNotificationCenter.defaultCenter().addObserverForName(
             name,
-            object: nil,
+            object: object,
             queue: NSOperationQueue.mainQueue(),
             usingBlock: action
         )
@@ -46,6 +46,18 @@ extension NSObject {
             }
         }
         NSNotificationCenter.defaultCenter().removeObserver(self, name: name, object: nil)
+    }
+    
+    func unsubscribeFromAll() {
+        var observers = objc_getAssociatedObject(self, &NotificationsObserversKey) as? [String : AnyObject]
+        if observers != nil {
+            for observer in observers!.values {
+                NSNotificationCenter.defaultCenter().removeObserver(observer)
+            }
+            observers?.removeAll()
+            objc_setAssociatedObject(self, NotificationsObserversKey, nil, .OBJC_ASSOCIATION_RETAIN)
+        }
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: nil, object: nil)
     }
     
 }

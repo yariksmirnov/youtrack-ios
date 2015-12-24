@@ -46,8 +46,6 @@ class HostDetailsViewController: UITableViewController {
         titleTextField?.text = host?.title
         hostTextField?.text = host?.url
         sslSwitch?.on = (host?.requiredSSL)!
-        loginTextField?.text = host?.login
-        passwordTextField?.text = host?.password
     }
     
     @IBAction func onDone() {
@@ -69,8 +67,6 @@ class HostDetailsViewController: UITableViewController {
         host.title = titleTextField?.text
         host.url = hostTextField?.text
         host.requiredSSL = (sslSwitch?.on)!
-        host.login = loginTextField?.text
-        host.password = passwordTextField?.text
         guard host.valid else {
             return nil
         }

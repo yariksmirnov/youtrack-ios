@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -21,7 +21,6 @@
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e2c-NA-0IJ">
                         <rect key="frame" x="0.0" y="95" width="370" height="0.5"/>
-                        <animations/>
                         <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="0.5" id="lKN-Wb-NYp"/>
@@ -29,7 +28,6 @@
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pk3-du-2X4">
                         <rect key="frame" x="0.0" y="0.0" width="4" height="95"/>
-                        <animations/>
                         <color key="backgroundColor" red="0.16548590669999999" green="0.80200441919999998" blue="0.09948900427" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="4" id="ss2-Bt-s4E"/>
@@ -37,20 +35,17 @@
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YTr-kS-kLN">
                         <rect key="frame" x="16" y="14" width="31" height="44.5"/>
-                        <animations/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Summary Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="96d-1p-x2f">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Summary Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="96d-1p-x2f">
                         <rect key="frame" x="16" y="62" width="111" height="19"/>
-                        <animations/>
                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
-                <animations/>
                 <constraints>
                     <constraint firstItem="96d-1p-x2f" firstAttribute="top" secondItem="YTr-kS-kLN" secondAttribute="bottom" constant="4" id="8pJ-ZX-X02"/>
                     <constraint firstAttribute="bottom" secondItem="e2c-NA-0IJ" secondAttribute="bottom" id="E1Z-ZB-dfy"/>
@@ -67,13 +62,12 @@
                 </constraints>
                 <edgeInsets key="layoutMargins" top="14" left="16" bottom="14" right="16"/>
             </tableViewCellContentView>
-            <animations/>
             <connections>
                 <outlet property="numberLabel" destination="YTr-kS-kLN" id="Khr-Gq-2Jx"/>
                 <outlet property="priorityMark" destination="pk3-du-2X4" id="flV-vb-rwP"/>
                 <outlet property="summaryLabel" destination="96d-1p-x2f" id="o4r-Y9-IBd"/>
             </connections>
-            <point key="canvasLocation" x="-548" y="145"/>
+            <point key="canvasLocation" x="-601" y="141"/>
         </tableViewCell>
     </objects>
 </document>
