@@ -33,6 +33,8 @@ public class ListViewController: ViewController, UITableViewDelegate, DataSource
     
     override public func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        tableView.contentInset = defaultContentInsets()
+        tableView.scrollIndicatorInsets = defaultContentInsets()
         if dataSource == nil {
             attachDataSource()
         }
@@ -53,7 +55,6 @@ public class ListViewController: ViewController, UITableViewDelegate, DataSource
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.backgroundColor = UIColor(gray: 236)
         tableView.separatorStyle = .None
-        tableView.contentInset = UIEdgeInsetsMake(0, 0, tabBarScrollBottomInset(), 0)
     }
     
     func attachDataSource() {
@@ -84,20 +85,6 @@ public class ListViewController: ViewController, UITableViewDelegate, DataSource
     override func addCustomNavigationBar(height: CGFloat = 64) {
         super.addCustomNavigationBar(height)
         automaticallyAdjustsScrollViewInsets = false
-        tableView.contentInset = UIEdgeInsetsMake(height, 0, tabBarScrollBottomInset(), 0)
-        tableView.separatorInset = tableView.contentInset
-    }
-    
-    func tabBarScrollBottomInset() -> CGFloat
-    {
-        let mainVC = AppDelegate.instance.mainViewController
-        let tabBarHeight = mainVC.tabBar.bounds.size.height
-        if (self.navigationController != nil && mainVC.viewControllers!.contains(self.navigationController!)) ||
-            mainVC.viewControllers!.contains(self)
-        {
-            return tabBarHeight
-        }
-        return 0
     }
     
     //MARK: DataSourceUpdater

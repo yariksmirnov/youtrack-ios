@@ -56,6 +56,11 @@ class DropDownListAnimator: NSObject, UIViewControllerAnimatedTransitioning {
                 if self.dismissing {
                     vc.view.removeFromSuperview()
                 }
+                if let tabBar = fromVC.tabBarController?.tabBar where !self.dismissing {
+                    let inheritedInsets = UIEdgeInsetsMake(0, 0, tabBar.height, 0)
+                    vc.tableView.contentInset = UIEdgeInsetsMake(0, 0, tabBar.height, 0)
+                    vc.tableView.scrollIndicatorInsets = UIEdgeInsetsMake(0, 0, tabBar.height, 0)
+                }
                 transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
             }
         )

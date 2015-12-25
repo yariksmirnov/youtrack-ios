@@ -25,7 +25,9 @@ class SavedSearchesViewController: ListViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.autoPinEdgesToSuperviewEdges()
-        tableView.rowHeight = 44
+        tableView.separatorInset = UIEdgeInsetsZero
+        tableView.separatorStyle = .SingleLine
+        tableView.rowHeight = 48
         automaticallyAdjustsScrollViewInsets = false
     }
     

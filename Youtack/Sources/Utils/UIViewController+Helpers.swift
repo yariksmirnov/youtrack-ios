@@ -37,4 +37,26 @@ extension UIViewController {
             self.presentViewController(viewControllerToPresent, animated: animated, completion: completion)
         }
     }
+    
+    func presentAfterDismiss(viewControllerToPresent: UIViewController,
+        viewControllerToDismiss: UIViewController, 
+        presentCompletion: (() -> Void)? = nil, 
+        dismissCompletion: (() -> Void)? = nil)
+    {
+        if viewControllerToDismiss.presentingViewController != nil {
+            viewControllerToDismiss.dismissViewControllerAnimated(true) {
+                dismissCompletion?()
+                self.presentViewController(
+                    viewControllerToPresent,
+                    animated: true, 
+                    completion: presentCompletion)
+            }
+        } else {
+            dismissCompletion?()
+            self.presentViewController(
+                viewControllerToPresent,
+                animated: true,
+                completion: presentCompletion)
+        }
+    }
 }

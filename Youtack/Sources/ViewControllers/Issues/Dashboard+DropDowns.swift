@@ -25,16 +25,14 @@ extension DashboardViewController {
         let projectsPresented = projectsViewController.presentingViewController != nil
         if !projectsPresented {
             expandableTitleView.animateToArrowOrientation(.Up)
-            presentAfterResign(projectsViewController, animated: true, completion: nil)
+            resignResponderAndWait {
+                self.presentAfterDismiss(
+                    self.projectsViewController,
+                    viewControllerToDismiss: self.savedSearchesViewController)
+            }
         } else {
             expandableTitleView.animateToArrowOrientation(.Down)
-            dismissViewControllerAnimated(true) {
-                if self.projectsViewController.selectedProject^ != self.selectedProject {
-                    self.selectedProject = self.projectsViewController.selectedProject^
-                    self.updateDataSource()
-                    self.updateTitle()
-                }
-            }
+            dismissViewControllerAnimated(true, completion:  nil)
         }
     }
     
@@ -49,16 +47,14 @@ extension DashboardViewController {
     @IBAction func onSavedSearches() {
         let contextsPreseneted = savedSearchesViewController.presentingViewController != nil
         if !contextsPreseneted {
-            expandableTitleView.animateToArrowOrientation(.Up)
-            presentAfterResign(savedSearchesViewController, animated: true, completion: nil)
-        } else {
             expandableTitleView.animateToArrowOrientation(.Down)
-            dismissViewControllerAnimated(true) {
-                if self.savedSearchesViewController.selectedContext^ != self.savedSearch {
-                    self.savedSearch = self.savedSearchesViewController.selectedContext^
-                    self.updateDataSource()
-                }
+            resignResponderAndWait {
+                self.presentAfterDismiss(
+                    self.savedSearchesViewController,
+                    viewControllerToDismiss: self.projectsViewController)
             }
+        } else {
+            dismissViewControllerAnimated(true, completion: nil)
         }
     }
 }

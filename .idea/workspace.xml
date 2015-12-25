@@ -2,66 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3156078-18f1-44b0-95d5-285195c0ed27" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Youtack/Assets.xcassets/bookmark.imageset/Bookmark-100.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Youtack/Assets.xcassets/expand_arrow.imageset/Expand Arrow-50.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Youtack/Assets.xcassets/bookmark.imageset/Contents.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Youtack/Assets.xcassets/expand_arrow.imageset/Contents.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Youtack/Interface/Login.storyboard" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Youtack/Sources/APIClient/AuthAPI.swift" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Youtack/Sources/APIClient/ProjectsAPI.swift" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Youtack/Sources/BuisnessLogic/Context.swift" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Youtack/Sources/BuisnessLogic/ProjectsManager.swift" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Youtack/Sources/Model/Project.swift" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Youtack/Sources/Utils/ColorsMap.swift" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Youtack/Sources/Utils/DropDownListAnimator.swift" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Youtack/Sources/Utils/SFPrensetationController.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Youtack/Sources/Utils/SFPrensetationController.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Youtack/Sources/Utils/UIView+Geomerty.swift" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Youtack/Sources/Utils/UIView+Tipster.swift" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Youtack/Sources/Utils/UIViewController+Tipster.swift" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Youtack/Sources/ViewControllers/Issues/Dashboard+Projects.swift" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Youtack/Sources/ViewControllers/Issues/Dashboard+SavedSearches.swift" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Youtack/Sources/ViewControllers/Issues/DashboardLayout.swift" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Youtack/Sources/ViewControllers/Issues/IssueViewController.swift" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Youtack/Sources/ViewControllers/Issues/ProjectsDataSource.swift" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Youtack/Sources/ViewControllers/Issues/ProjectsViewController.swift" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Youtack/Sources/ViewControllers/Issues/SearchContextsViewController.swift" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Youtack/Sources/ViewControllers/Login/LoginManager.swift" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Youtack/Sources/ViewControllers/Login/LoginViewController.swift" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Youtack/Sources/Views/ExpandableTitleView.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Youtack/Sources/Views/ExpandableTitleView.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Youtack/Sources/Views/ProjectCell.swift" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Youtack/Sources/Views/Youtack-Bridging-Header.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/youtrack-ios.iml" afterPath="$PROJECT_DIR$/.idea/youtrack-ios.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Podfile" afterPath="$PROJECT_DIR$/Podfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Podfile.lock" afterPath="$PROJECT_DIR$/Podfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Youtack.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/Youtack.xcodeproj/project.pbxproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Youtack/Assets.xcassets/AppIcon.appiconset/Contents.json" afterPath="$PROJECT_DIR$/Youtack/Assets.xcassets/AppIcon.appiconset/Contents.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Youtack/Interface/Dashboard.storyboard" afterPath="$PROJECT_DIR$/Youtack/Interface/Dashboard.storyboard" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Youtack/Interface/Hosts.storyboard" afterPath="$PROJECT_DIR$/Youtack/Interface/Hosts.storyboard" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Youtack/Interface/IssueCell.xib" afterPath="$PROJECT_DIR$/Youtack/Interface/IssueCell.xib" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Youtack/Interface/Main.storyboard" afterPath="$PROJECT_DIR$/Youtack/Interface/Main.storyboard" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Youtack/Sources/APIClient/APIClient.swift" afterPath="$PROJECT_DIR$/Youtack/Sources/APIClient/APIClient.swift" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Youtack/Sources/APIClient/Paginator.swift" afterPath="$PROJECT_DIR$/Youtack/Sources/APIClient/Paginator.swift" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Youtack/Sources/APIClient/Requests.swift" afterPath="$PROJECT_DIR$/Youtack/Sources/APIClient/Requests.swift" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Youtack/Sources/APIClient/Router.swift" afterPath="$PROJECT_DIR$/Youtack/Sources/APIClient/Router.swift" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Youtack/Sources/APIClient/UserAPI.swift" afterPath="$PROJECT_DIR$/Youtack/Sources/APIClient/UserAPI.swift" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Youtack/Sources/AppDelegate.swift" afterPath="$PROJECT_DIR$/Youtack/Sources/AppDelegate.swift" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Youtack/Sources/BuisnessLogic/HostsManager.swift" afterPath="$PROJECT_DIR$/Youtack/Sources/BuisnessLogic/HostsManager.swift" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Youtack/Sources/BuisnessLogic/Session.swift" afterPath="$PROJECT_DIR$/Youtack/Sources/BuisnessLogic/Session.swift" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Youtack/Sources/DataSource/DataSource.swift" afterPath="$PROJECT_DIR$/Youtack/Sources/DataSource/DataSource.swift" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Youtack/Sources/Model/Host.swift" afterPath="$PROJECT_DIR$/Youtack/Sources/Model/Host.swift" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Youtack/Sources/Utils/Notifications.swift" afterPath="$PROJECT_DIR$/Youtack/Sources/Utils/Notifications.swift" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Youtack/Sources/ViewControllers/Generic/ListViewController.swift" afterPath="$PROJECT_DIR$/Youtack/Sources/ViewControllers/Generic/ListViewController.swift" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Youtack/Sources/ViewControllers/Generic/ViewController.swift" afterPath="$PROJECT_DIR$/Youtack/Sources/ViewControllers/Generic/ViewController.swift" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Youtack/Sources/ViewControllers/Issues/DashboardViewController.swift" afterPath="$PROJECT_DIR$/Youtack/Sources/ViewControllers/Issues/DashboardViewController.swift" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Youtack/Sources/ViewControllers/Issues/IssuesDataSource.swift" afterPath="$PROJECT_DIR$/Youtack/Sources/ViewControllers/Issues/IssuesDataSource.swift" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Youtack/Sources/ViewControllers/Issues/SavedSearchesDataSource.swift" afterPath="$PROJECT_DIR$/Youtack/Sources/ViewControllers/Issues/SavedSearchesDataSource.swift" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Youtack/Sources/ViewControllers/Main/MainViewController.swift" afterPath="$PROJECT_DIR$/Youtack/Sources/ViewControllers/Main/MainViewController.swift" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Youtack/Sources/ViewControllers/Settings/Hosts/HostDetailsViewController.swift" afterPath="$PROJECT_DIR$/Youtack/Sources/ViewControllers/Settings/Hosts/HostDetailsViewController.swift" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Youtack/Sources/ViewControllers/Settings/Hosts/HostsListViewContoller.swift" afterPath="$PROJECT_DIR$/Youtack/Sources/ViewControllers/Settings/Hosts/HostsListViewContoller.swift" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Youtack/Sources/Views/SavedSearchCell.swift" afterPath="$PROJECT_DIR$/Youtack/Sources/Views/SavedSearchCell.swift" />
     </list>
     <ignored path="youtrack-ios.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -112,31 +53,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Dashboard+Projects.swift" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Youtack/Sources/ViewControllers/Issues/Dashboard+Projects.swift">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.37562606">
-              <caret line="24" column="54" selection-start-line="24" selection-start-column="54" selection-end-line="24" selection-end-column="54" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Dashboard+SavedSearches.swift" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Youtack/Sources/ViewControllers/Issues/Dashboard+SavedSearches.swift">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DashboardLayout.swift" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DashboardLayout.swift" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Youtack/Sources/ViewControllers/Issues/DashboardLayout.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.42570952">
+              <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -774,6 +695,56 @@
     <entry file="file://$PROJECT_DIR$/Youtack/Sources/ViewControllers/Issues/DashboardViewController.swift">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Youtack/Sources/ViewControllers/Issues/DashboardLayout.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Youtack/Sources/Views/Youtack-Bridging-Header.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding>
+            <element signature="e#105#136#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Youtack/Sources/ViewControllers/Issues/SearchContextsViewController.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Youtack/Sources/Views/ExpandableTitleView.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Youtack/Sources/Views/ExpandableTitleView.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="37" column="69" selection-start-line="37" selection-start-column="69" selection-end-line="37" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Youtack/Sources/ViewControllers/Issues/DashboardViewController.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
           <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
           <folding />
         </state>
@@ -866,7 +837,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="30" column="47" selection-start-line="30" selection-start-column="47" selection-end-line="30" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -874,7 +844,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="29" column="27" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -945,7 +914,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5619597">
           <caret line="26" column="43" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1022,23 +990,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2754591">
           <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Youtack/Sources/ViewControllers/Issues/DashboardLayout.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Youtack/Sources/ViewControllers/Issues/Dashboard+SavedSearches.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1050,10 +1001,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Youtack/Sources/ViewControllers/Issues/Dashboard+Projects.swift">
+    <entry file="file://$PROJECT_DIR$/Youtack/Sources/ViewControllers/Issues/DashboardLayout.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37562606">
-          <caret line="24" column="54" selection-start-line="24" selection-start-column="54" selection-end-line="24" selection-end-column="54" />
+        <state vertical-scroll-proportion="0.42570952">
+          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
           <folding />
         </state>
       </provider>

@@ -8,16 +8,16 @@
 
 import UIKit
 
-class DashboardViewController: ListViewController {
+class DashboardViewController: ListViewController, UITextFieldDelegate {
     
     var contextsTableView = UITableView()
     var contextsDataSource = SavedSearchesDataSource()
     var contextsAdapter: BasicAdapter!
     var expandableTitleView = ExpandableTitleView()
     @IBOutlet var searchBarContainer: UIView!
+    @IBOutlet var searchField: UITextField!
     
     var selectedProject: Project?
-    var savedSearch: SavedSearch?
     var savedSearchesViewController = SavedSearchesViewController()
     var projectsViewController = ProjectsViewController()
     
@@ -32,14 +32,24 @@ class DashboardViewController: ListViewController {
         
         savedSearchesViewController.attachDataSource()
         savedSearchesViewController.dataSource?.loadContent(false)
-        savedSearchesViewController.selectedContext += { old, new in
-            self.onSavedSearches()
+        savedSearchesViewController.selectedContext += { [unowned self] old, new in
+            self.dismissViewControllerAnimated(true) {
+                self.searchField.text = new?.query ?? self.searchField.text
+                self.updateDataSource()
+            }
         }
         
         projectsViewController.attachDataSource()
         projectsViewController.dataSource?.loadContent(false)
-        projectsViewController.selectedProject += { old, new in
-            self.onTitleView()
+        projectsViewController.selectedProject += { [unowned self] old, new in
+            self.expandableTitleView.animateToArrowOrientation(.Down)
+            self.dismissViewControllerAnimated(true) {
+                if self.projectsViewController.selectedProject^ != self.selectedProject {
+                    self.selectedProject = self.projectsViewController.selectedProject^
+                    self.updateDataSource()
+                    self.updateTitle()
+                }
+            }
         }
     }
     
@@ -51,6 +61,7 @@ class DashboardViewController: ListViewController {
     override func layoutTableView() {
         super.layoutTableView()
         automaticallyAdjustsScrollViewInsets = false
+        tableView.keyboardDismissMode = .Interactive
         tableView.estimatedRowHeight = 88
         tableView.autoPinEdgesToSuperviewEdgesWithInsets(
             UIEdgeInsetsZero,
@@ -59,13 +70,21 @@ class DashboardViewController: ListViewController {
     }
     
     override func buildDataSource() -> DataSource? {
-        return IssuesDataSource(project: selectedProject, searchQuery: savedSearch?.query)
+        return IssuesDataSource(project: selectedProject, searchQuery: searchField.text)
     }
     
     func updateDataSource() {
         resetDataSource()
         attachDataSource()
         dataSource?.loadContent(false)
+    }
+    
+    //MARK: TextFieldDelegate
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        updateDataSource()
+        textField.resignFirstResponder()
+        return true
     }
     
     //MARK: TableViewDelegate

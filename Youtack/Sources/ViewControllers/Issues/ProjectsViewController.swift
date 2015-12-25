@@ -21,8 +21,15 @@ class ProjectsViewController: ListViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.autoPinEdgesToSuperviewEdges()
-        tableView.rowHeight = 44
+        tableView.rowHeight = 48
+        tableView.separatorStyle = .SingleLine
+        tableView.separatorInset = UIEdgeInsetsZero
         automaticallyAdjustsScrollViewInsets = false
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -35,6 +42,16 @@ class ProjectsViewController: ListViewController {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         selectedProject ^= dataSource?.dataSourceItem(indexPath) as? Project
+    }
+    
+    func tableView(tableView: UITableView,
+        willDisplayCell cell: UITableViewCell, 
+        forRowAtIndexPath indexPath: NSIndexPath)
+    {
+        guard let project = dataSource?.dataSourceItem(indexPath) as? Project else {
+            return
+        }
+        cell.accessoryType = selectedProject^ == project ? .Checkmark : .None
     }
 }
 

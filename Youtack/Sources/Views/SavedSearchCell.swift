@@ -27,6 +27,8 @@ public class SavedSearchCell: UITableViewCell, ConfigurableCell {
     
     func defaultInit() {
         selectionStyle = .None
+        layoutMargins = UIEdgeInsetsZero
+        preservesSuperviewLayoutMargins = false
         contentView.addSubview(separatorView)
         separatorView.autoSetDimension(.Height, toSize: 1.0)
         separatorView.autoPinEdgesToSuperviewEdgesWithInsets(UIEdgeInsetsZero, excludingEdge: .Top)

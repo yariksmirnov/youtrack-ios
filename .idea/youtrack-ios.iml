@@ -2,6 +2,7 @@
 <module type="CIDR_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/Youtack/Assets.xcassets" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Interface/Login.storyboard" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Interface/Dashboard.storyboard" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Interface/Main.storyboard" isTestSource="false" />
@@ -9,18 +10,17 @@
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Interface/Hosts.storyboard" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Interface/Settings.storyboard" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Interface/Base.lproj/LaunchScreen.storyboard" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Youtack/Youtack.entitlements" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/BuisnessLogic/ProjectsManager.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/BuisnessLogic/HostsManager.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/BuisnessLogic/Session.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/BuisnessLogic/Context.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/DataSource/PaginationDataSource.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/DataSource/BasicAdapter.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/DataSource/DataSource.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/DataSource/PlaceholderView.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/DataSource/DataSource.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/DataSource/PaginationDataSource.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/AppDelegate.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/Views/ProjectCell.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/Views/MaterialTableCell.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/Views/ProjectCell.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/Views/IssueCell.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/Views/SavedSearchCell.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/Views/ExpandableTitleView.m" isTestSource="false" />
@@ -42,62 +42,61 @@
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/ViewControllers/Generic/ViewController.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/ViewControllers/Generic/NavigationController.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/ViewControllers/Generic/ListViewController.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/ViewControllers/Login/LoginManager.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/ViewControllers/Login/LoginViewController.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/ViewControllers/Settings/SettingsViewController.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/ViewControllers/Settings/Hosts/HostDetailsViewController.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/ViewControllers/Settings/Hosts/HostCell.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/ViewControllers/Settings/Hosts/HostsListViewContoller.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/ViewControllers/Settings/Hosts/HostCell.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/ViewControllers/Settings/Hosts/HostDetailsViewController.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/ViewControllers/Issues/ProjectsViewController.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/ViewControllers/Issues/ProjectsDataSource.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/ViewControllers/Issues/DashboardViewController.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/ViewControllers/Issues/DashboardLayout.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/ViewControllers/Issues/IssuesDataSource.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/ViewControllers/Issues/SearchContextsViewController.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/ViewControllers/Issues/IssuesListViewController.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/ViewControllers/Issues/SavedSearchesDataSource.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/ViewControllers/Issues/Dashboard+DropDowns.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/ViewControllers/Issues/IssueViewController.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/ViewControllers/Issues/Dashboard+Projects.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/ViewControllers/Issues/Dashboard+SavedSearches.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/ViewControllers/Login/LoginManager.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/ViewControllers/Login/LoginViewController.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/ViewControllers/Issues/SavedSearchesDataSource.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/ViewControllers/Issues/IssuesDataSource.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/ViewControllers/Issues/IssuesListViewController.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/APIClient/Router.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/APIClient/APIClient.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/APIClient/UserAPI.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/APIClient/AuthAPI.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/APIClient/Requests.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/APIClient/Paginator.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/APIClient/Requests.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/APIClient/ProjectsAPI.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/Utils/Notifications.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/Utils/HexColors.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/Utils/Utils.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/Utils/UIView+Geomerty.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/Utils/Extensions.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/Utils/UIViewController+Tipster.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/Utils/SFPrensetationController.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/Utils/Notifications.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/Utils/ColorsMap.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/Utils/SFPrensetationController.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/Utils/Extensions.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/Utils/UIView+Geomerty.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/Utils/UIView+Tipster.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/Utils/HexColors.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Sources/Utils/DropDownListAnimator.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Resources/R.generated.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Youtack/Resources/Fonts/RobotoCondensed-Light.ttf" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Resources/Fonts/RobotoCondensed-Bold.ttf" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Resources/Fonts/Roboto-Bold.ttf" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Youtack/Resources/Fonts/Roboto-Light.ttf" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Youtack/Resources/Fonts/Roboto-Medium.ttf" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Resources/Fonts/Roboto-MediumItalic.ttf" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Resources/Fonts/Roboto-Black.ttf" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Youtack/Resources/Fonts/Roboto-Medium.ttf" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Youtack/Resources/Fonts/Roboto-Regular.ttf" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Youtack/Resources/Fonts/RobotoCondensed-Regular.ttf" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Youtack/Resources/Fonts/Roboto-Light.ttf" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Youtack/Resources/Fonts/RobotoCondensed-Light.ttf" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Resources/Fonts/RobotoCondensed-LightItalic.ttf" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Youtack/Resources/Fonts/Roboto-BoldItalic.ttf" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Resources/Fonts/Roboto-Italic.ttf" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Resources/Fonts/Roboto-Thin.ttf" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Resources/Fonts/RobotoCondensed-Italic.ttf" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Resources/Fonts/Roboto-BlackItalic.ttf" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Resources/Fonts/Roboto-ThinItalic.ttf" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Youtack/Resources/Fonts/RobotoCondensed-Regular.ttf" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Youtack/Resources/Fonts/Roboto-LightItalic.ttf" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Youtack/Resources/Fonts/Roboto-Regular.ttf" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Youtack/Resources/Fonts/Roboto-BoldItalic.ttf" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Resources/Fonts/RobotoCondensed-BoldItalic.ttf" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Youtack/Resources/Fonts/Roboto-LightItalic.ttf" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Youtack/Info.plist" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Youtack/Assets.xcassets" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Youtack/Youtack.entitlements" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Podfile" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/SDWebImage/SDWebImage/UIView+WebCacheOperation.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/SDWebImage/SDWebImage/UIImage+GIF.m" isTestSource="false" />
@@ -109,19 +108,19 @@
       <sourceFolder url="file://$MODULE_DIR$/Pods/SDWebImage/SDWebImage/UIImage+GIF.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/SDWebImage/SDWebImage/UIImage+MultiFormat.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/SDWebImage/SDWebImage/UIImageView+HighlightedWebCache.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/SDWebImage/SDWebImage/SDWebImageDownloaderOperation.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/SDWebImage/SDWebImage/NSData+ImageContentType.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/SDWebImage/SDWebImage/UIImage+MultiFormat.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/SDWebImage/SDWebImage/SDWebImagePrefetcher.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/SDWebImage/SDWebImage/UIImageView+WebCache.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/SDWebImage/SDWebImage/UIButton+WebCache.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/SDWebImage/SDWebImage/NSData+ImageContentType.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/SDWebImage/SDWebImage/SDWebImageOperation.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/SDWebImage/SDWebImage/UIButton+WebCache.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/SDWebImage/SDWebImage/SDWebImageDecoder.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/SDWebImage/SDWebImage/UIImageView+WebCache.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/SDWebImage/SDWebImage/SDWebImagePrefetcher.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/SDWebImage/SDWebImage/SDWebImageDownloader.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/SDWebImage/SDWebImage/SDImageCache.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/SDWebImage/SDWebImage/SDWebImageDecoder.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/SDWebImage/SDWebImage/SDImageCache.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/SDWebImage/SDWebImage/SDWebImageDownloaderOperation.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/SDWebImage/SDWebImage/SDWebImagePrefetcher.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/SDWebImage/SDWebImage/SDWebImageDownloader.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/SDWebImage/SDWebImage/UIView+WebCacheOperation.m" isTestSource="false" />
@@ -147,15 +146,15 @@
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/UIColor+BFPaperColors/UIColor+BFPaperColors.modulemap" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/UIColor+BFPaperColors/UIColor+BFPaperColors-prefix.pch" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/XMLDictionary/XMLDictionary-umbrella.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/XMLDictionary/XMLDictionary-prefix.pch" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/XMLDictionary/Info.plist" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/XMLDictionary/XMLDictionary-dummy.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/XMLDictionary/XMLDictionary.modulemap" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/XMLDictionary/Info.plist" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/XMLDictionary/XMLDictionary-prefix.pch" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/XMLDictionary/XMLDictionary.xcconfig" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/XCGLogger/XCGLogger.xcconfig" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/XCGLogger/XCGLogger-dummy.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/XCGLogger/XCGLogger-umbrella.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/XCGLogger/XCGLogger-prefix.pch" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/XCGLogger/XCGLogger-umbrella.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/XCGLogger/XCGLogger-dummy.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/XCGLogger/XCGLogger.modulemap" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/XCGLogger/Info.plist" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/SwiftyStateMachine/SwiftyStateMachine.xcconfig" isTestSource="false" />
@@ -176,16 +175,6 @@
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/PureLayout/Info.plist" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/PureLayout/PureLayout-prefix.pch" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/PureLayout/PureLayout.xcconfig" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods/Pods-acknowledgements.markdown" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods/Pods.modulemap" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods/Pods-dummy.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods/Pods.debug.xcconfig" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods/Pods.release.xcconfig" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods/Info.plist" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods/Pods-umbrella.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods/Pods-frameworks.sh" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods/Pods-resources.sh" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods/Pods-acknowledgements.plist" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/ExSwift/ExSwift-prefix.pch" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/ExSwift/ExSwift-umbrella.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/ExSwift/ExSwift-dummy.m" isTestSource="false" />
@@ -228,28 +217,41 @@
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/AlamofireImage/AlamofireImage.xcconfig" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/AlamofireImage/Info.plist" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/AlamofireImage/AlamofireImage.modulemap" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/MaterialKit-Swift2/MaterialKit-Swift2.xcconfig" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/MaterialKit-Swift2/MaterialKit-Swift2-prefix.pch" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/MaterialKit-Swift2/Info.plist" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/MaterialKit-Swift2/MaterialKit-Swift2.modulemap" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/MaterialKit-Swift2/MaterialKit-Swift2-dummy.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/MaterialKit-Swift2/MaterialKit-Swift2-umbrella.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods/Pods-acknowledgements.markdown" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods/Pods.modulemap" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods/Pods-frameworks.sh" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods/Pods-resources.sh" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods/Pods.release.xcconfig" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods/Info.plist" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods/Pods-umbrella.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods/Pods-dummy.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods/Pods.debug.xcconfig" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods/Pods-acknowledgements.plist" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/KeychainSwift/KeychainSwift-dummy.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/KeychainSwift/KeychainSwift-umbrella.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/KeychainSwift/Info.plist" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/KeychainSwift/KeychainSwift-prefix.pch" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/KeychainSwift/KeychainSwift.xcconfig" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/KeychainSwift/KeychainSwift.modulemap" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/MaterialKit-Swift2/MaterialKit-Swift2.xcconfig" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/MaterialKit-Swift2/MaterialKit-Swift2-prefix.pch" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/MaterialKit-Swift2/Info.plist" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/MaterialKit-Swift2/MaterialKit-Swift2.modulemap" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/MaterialKit-Swift2/MaterialKit-Swift2-dummy.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/MaterialKit-Swift2/MaterialKit-Swift2-umbrella.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/BigBrother/BigBrother/Manager.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/BigBrother/BigBrother/BigBrother.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/XMLDictionary/XMLDictionary/XMLDictionary.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/XMLDictionary/XMLDictionary/XMLDictionary.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/XCGLogger/XCGLogger/Library/XCGLogger/XCGLogger.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AlamofireImage/Source/ImageDownloader.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AlamofireImage/Source/ImageCache.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AlamofireImage/Source/Image.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AlamofireImage/Source/ImageFilter.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AlamofireImage/Source/Request+AlamofireImage.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AlamofireImage/Source/UIImage+AlamofireImage.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AlamofireImage/Source/UIImageView+AlamofireImage.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/SwiftyStateMachine/StateMachine/GraphableStateMachineSchema.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/SwiftyStateMachine/StateMachine/StateMachine.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/BFPaperTabBarController/Classes/BFPaperTabBarController.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/BFPaperTabBarController/Classes/BFPaperTabBarController.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/PureLayout/PureLayout/PureLayout/PureLayout.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/PureLayout/PureLayout/PureLayout/PureLayout+Internal.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/PureLayout/PureLayout/PureLayout/NSArray+PureLayout.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/PureLayout/PureLayout/PureLayout/ALView+PureLayout.m" isTestSource="false" />
@@ -257,16 +259,10 @@
       <sourceFolder url="file://$MODULE_DIR$/Pods/PureLayout/PureLayout/PureLayout/NSLayoutConstraint+PureLayout.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/PureLayout/PureLayout/PureLayout/ALView+PureLayout.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/PureLayout/PureLayout/PureLayout/PureLayoutDefines.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/PureLayout/PureLayout/PureLayout/PureLayout.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/PureLayout/PureLayout/PureLayout/NSArray+PureLayout.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/UIColor+BFPaperColors/UIColor+BFPaperColors/UIColor+BFPaperColors.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/UIColor+BFPaperColors/UIColor+BFPaperColors/UIColor+BFPaperColors.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/AlamofireImage/Source/Request+AlamofireImage.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/AlamofireImage/Source/ImageCache.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/AlamofireImage/Source/Image.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/AlamofireImage/Source/ImageFilter.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/AlamofireImage/Source/ImageDownloader.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/AlamofireImage/Source/UIImage+AlamofireImage.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/AlamofireImage/Source/UIImageView+AlamofireImage.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/XCGLogger/XCGLogger/Library/XCGLogger/XCGLogger.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/MaterialDesignColor/Sources/MaterialDesignColor.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/ExSwift/ExSwift/NSDate.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/ExSwift/ExSwift/Double.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/ExSwift/ExSwift/String.swift" isTestSource="false" />
@@ -282,28 +278,30 @@
       <sourceFolder url="file://$MODULE_DIR$/Pods/ExSwift/ExSwift/Character.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/ExSwift/ExSwift/Float.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Observable-Swift/Observable-Swift/TupleObservable.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Observable-Swift/Observable-Swift/Observable.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Observable-Swift/Observable-Swift/OwningEventReference.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Observable-Swift/Observable-Swift/EventSubscription.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Observable-Swift/Observable-Swift/EventReference.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Observable-Swift/Observable-Swift/Protocols.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Observable-Swift/Observable-Swift/ObservableProxy.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Observable-Swift/Observable-Swift/OwningEventReference.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Observable-Swift/Observable-Swift/Observable.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Observable-Swift/Observable-Swift/ObservableChainingProxy.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Observable-Swift/Observable-Swift/ObservableReference.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Observable-Swift/Observable-Swift/Event.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Alamofire/Source/Stream.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Alamofire/Source/Download.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Alamofire/Source/MultipartFormData.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Alamofire/Source/ResponseSerialization.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Alamofire/Source/ServerTrustPolicy.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Alamofire/Source/ParameterEncoding.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Alamofire/Source/MultipartFormData.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Alamofire/Source/Error.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Alamofire/Source/Request.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Alamofire/Source/Download.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Alamofire/Source/Manager.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Alamofire/Source/ResponseSerialization.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Alamofire/Source/Error.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Alamofire/Source/Alamofire.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Alamofire/Source/Stream.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Alamofire/Source/Request.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Alamofire/Source/Upload.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Alamofire/Source/Validation.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Alamofire/Source/Result.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/BFPaperTabBarController/Classes/BFPaperTabBarController.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/BFPaperTabBarController/Classes/BFPaperTabBarController.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Mantle/Mantle/MTLReflection.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Mantle/Mantle/MTLReflection.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Mantle/Mantle/Mantle.h" isTestSource="false" />
@@ -339,20 +337,21 @@
       <sourceFolder url="file://$MODULE_DIR$/Pods/Mantle/Mantle/NSObject+MTLComparisonAdditions.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Mantle/Mantle/MTLTransformerErrorHandling.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Mantle/Mantle/NSObject+MTLComparisonAdditions.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/MaterialDesignColor/Sources/MaterialDesignColor.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/UIColor+BFPaperColors/UIColor+BFPaperColors/UIColor+BFPaperColors.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/UIColor+BFPaperColors/UIColor+BFPaperColors/UIColor+BFPaperColors.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/KeychainAccess/Lib/KeychainAccess/Keychain.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/HockeySDK/HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDK.framework/Versions/A/Resources/HockeySDKResources.bundle/buttonRoundedRegular.png" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/HockeySDK/HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDK.framework/Versions/A/Resources/HockeySDKResources.bundle/Cancel.png" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/HockeySDK/HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDK.framework/Versions/A/Resources/HockeySDKResources.bundle/buttonRoundedRegularHighlighted.png" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/HockeySDK/HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDK.framework/Versions/A/Resources/HockeySDKResources.bundle/IconGradient.png" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/HockeySDK/HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDK.framework/Versions/A/Resources/HockeySDKResources.bundle/Cancel@2x.png" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/HockeySDK/HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDK.framework/Versions/A/Resources/HockeySDKResources.bundle/Arrow@2x.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/HockeySDK/HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDK.framework/Versions/A/Resources/HockeySDKResources.bundle/Rectangle.png" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/HockeySDK/HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDK.framework/Versions/A/Resources/HockeySDKResources.bundle/iconCamera.png" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/HockeySDK/HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDK.framework/Versions/A/Resources/HockeySDKResources.bundle/IconGradient@2x.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/HockeySDK/HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDK.framework/Versions/A/Resources/HockeySDKResources.bundle/Cancel@2x.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/HockeySDK/HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDK.framework/Versions/A/Resources/HockeySDKResources.bundle/Blur@3x.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/HockeySDK/HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDK.framework/Versions/A/Resources/HockeySDKResources.bundle/Arrow@2x.png" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/HockeySDK/HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDK.framework/Versions/A/Resources/HockeySDKResources.bundle/Blur@2x.png" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/HockeySDK/HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDK.framework/Versions/A/Resources/HockeySDKResources.bundle/iconCamera@2x.png" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/HockeySDK/HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDK.framework/Versions/A/Resources/HockeySDKResources.bundle/buttonRoundedRegularHighlighted@2x.png" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/HockeySDK/HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDK.framework/Versions/A/Resources/HockeySDKResources.bundle/authorize_denied@3x.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/HockeySDK/HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDK.framework/Versions/A/Resources/HockeySDKResources.bundle/IconGradient.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/HockeySDK/HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDK.framework/Versions/A/Resources/HockeySDKResources.bundle/IconGradient@2x.png" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/HockeySDK/HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDK.framework/Versions/A/Resources/HockeySDKResources.bundle/Rectangle@3x.png" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/HockeySDK/HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDK.framework/Versions/A/Resources/HockeySDKResources.bundle/Blur.png" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/HockeySDK/HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDK.framework/Versions/A/Resources/HockeySDKResources.bundle/buttonRoundedRegular@2x.png" isTestSource="false" />
@@ -361,7 +360,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Pods/HockeySDK/HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDK.framework/Versions/A/Resources/HockeySDKResources.bundle/feedbackActivity~ipad.png" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/HockeySDK/HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDK.framework/Versions/A/Resources/HockeySDKResources.bundle/buttonRoundedDelete.png" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/HockeySDK/HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDK.framework/Versions/A/Resources/HockeySDKResources.bundle/Arrow.png" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/HockeySDK/HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDK.framework/Versions/A/Resources/HockeySDKResources.bundle/Rectangle.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/HockeySDK/HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDK.framework/Versions/A/Resources/HockeySDKResources.bundle/buttonRoundedRegularHighlighted@2x.png" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/HockeySDK/HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDK.framework/Versions/A/Resources/HockeySDKResources.bundle/buttonRoundedDeleteHighlighted@2x.png" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/HockeySDK/HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDK.framework/Versions/A/Resources/HockeySDKResources.bundle/feedbackActivity@3x.png" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/HockeySDK/HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDK.framework/Versions/A/Resources/HockeySDKResources.bundle/Rectangle@2x.png" isTestSource="false" />
@@ -374,7 +373,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Pods/HockeySDK/HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDK.framework/Versions/A/Resources/HockeySDKResources.bundle/Arrow@3x.png" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/HockeySDK/HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDK.framework/Versions/A/Resources/HockeySDKResources.bundle/Ok@2x.png" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/HockeySDK/HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDK.framework/Versions/A/Resources/HockeySDKResources.bundle/feedbackActivity@2x.png" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/HockeySDK/HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDK.framework/Versions/A/Resources/HockeySDKResources.bundle/Blur@3x.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/HockeySDK/HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDK.framework/Versions/A/Resources/HockeySDKResources.bundle/authorize_denied@3x.png" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/HockeySDK/HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDK.framework/Versions/A/Resources/HockeySDKResources.bundle/authorize_denied@2x.png" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/HockeySDK/HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDK.framework/Versions/A/Resources/HockeySDKResources.bundle/buttonRoundedDeleteHighlighted.png" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/MaterialKit-Swift2/Source/MKLayer.swift" isTestSource="false" />

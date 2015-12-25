@@ -35,6 +35,17 @@ public class ViewController: UIViewController {
         navigationBar?.items = [navItem!]
     }
     
+    func defaultContentInsets() -> UIEdgeInsets {
+        var insets = UIEdgeInsets()
+        if let tabBar = tabBarController?.tabBar {
+            insets.bottom = tabBar.height
+        }
+        if let customNavBar = navigationBar {
+            insets.top = customNavBar.height
+        }
+        return insets
+    }
+    
     func updateNavigationBarVisibility(animated: Bool) {
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
     }
